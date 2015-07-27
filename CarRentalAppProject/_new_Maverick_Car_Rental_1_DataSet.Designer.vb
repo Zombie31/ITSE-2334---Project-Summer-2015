@@ -20,9 +20,9 @@ Option Explicit On
  Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
  Global.System.ComponentModel.ToolboxItem(true),  _
  Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema"),  _
- Global.System.Xml.Serialization.XmlRootAttribute("new_Maverick_Car_RentalDataSet"),  _
+ Global.System.Xml.Serialization.XmlRootAttribute("_new_Maverick_Car_Rental_1_DataSet"),  _
  Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")>  _
-Partial Public Class new_Maverick_Car_RentalDataSet
+Partial Public Class _new_Maverick_Car_Rental_1_DataSet
     Inherits Global.System.Data.DataSet
     
     Private tableCustomer As CustomerDataTable
@@ -35,11 +35,7 @@ Partial Public Class new_Maverick_Car_RentalDataSet
     
     Private relationCustomerRental As Global.System.Data.DataRelation
     
-    Private relationPriceRental As Global.System.Data.DataRelation
-    
     Private relationVehicleRental As Global.System.Data.DataRelation
-    
-    Private relationCustomerVehicle As Global.System.Data.DataRelation
     
     Private relationPriceVehicle As Global.System.Data.DataRelation
     
@@ -183,7 +179,7 @@ Partial Public Class new_Maverick_Car_RentalDataSet
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Public Overrides Function Clone() As Global.System.Data.DataSet
-        Dim cln As new_Maverick_Car_RentalDataSet = CType(MyBase.Clone,new_Maverick_Car_RentalDataSet)
+        Dim cln As _new_Maverick_Car_Rental_1_DataSet = CType(MyBase.Clone,_new_Maverick_Car_Rental_1_DataSet)
         cln.InitVars
         cln.SchemaSerializationMode = Me.SchemaSerializationMode
         Return cln
@@ -277,18 +273,16 @@ Partial Public Class new_Maverick_Car_RentalDataSet
             End If
         End If
         Me.relationCustomerRental = Me.Relations("CustomerRental")
-        Me.relationPriceRental = Me.Relations("PriceRental")
         Me.relationVehicleRental = Me.Relations("VehicleRental")
-        Me.relationCustomerVehicle = Me.Relations("CustomerVehicle")
         Me.relationPriceVehicle = Me.Relations("PriceVehicle")
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Private Sub InitClass()
-        Me.DataSetName = "new_Maverick_Car_RentalDataSet"
+        Me.DataSetName = "_new_Maverick_Car_Rental_1_DataSet"
         Me.Prefix = ""
-        Me.Namespace = "http://tempuri.org/new_Maverick_Car_RentalDataSet.xsd"
+        Me.Namespace = "http://tempuri.org/_new_Maverick_Car_Rental_1_DataSet.xsd"
         Me.EnforceConstraints = true
         Me.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
         Me.tableCustomer = New CustomerDataTable()
@@ -299,14 +293,10 @@ Partial Public Class new_Maverick_Car_RentalDataSet
         MyBase.Tables.Add(Me.tableRental)
         Me.tableVehicle = New VehicleDataTable()
         MyBase.Tables.Add(Me.tableVehicle)
-        Me.relationCustomerRental = New Global.System.Data.DataRelation("CustomerRental", New Global.System.Data.DataColumn() {Me.tableCustomer.KeyColumn}, New Global.System.Data.DataColumn() {Me.tableRental.KeyColumn}, false)
+        Me.relationCustomerRental = New Global.System.Data.DataRelation("CustomerRental", New Global.System.Data.DataColumn() {Me.tableCustomer.Customer_NumberColumn}, New Global.System.Data.DataColumn() {Me.tableRental.Customer_NumberColumn}, false)
         Me.Relations.Add(Me.relationCustomerRental)
-        Me.relationPriceRental = New Global.System.Data.DataRelation("PriceRental", New Global.System.Data.DataColumn() {Me.tablePrice.CategoryColumn}, New Global.System.Data.DataColumn() {Me.tableRental.CategoryColumn}, false)
-        Me.Relations.Add(Me.relationPriceRental)
-        Me.relationVehicleRental = New Global.System.Data.DataRelation("VehicleRental", New Global.System.Data.DataColumn() {Me.tableVehicle.KeyColumn}, New Global.System.Data.DataColumn() {Me.tableRental.KeyColumn}, false)
+        Me.relationVehicleRental = New Global.System.Data.DataRelation("VehicleRental", New Global.System.Data.DataColumn() {Me.tableVehicle.VINColumn}, New Global.System.Data.DataColumn() {Me.tableRental.VINColumn}, false)
         Me.Relations.Add(Me.relationVehicleRental)
-        Me.relationCustomerVehicle = New Global.System.Data.DataRelation("CustomerVehicle", New Global.System.Data.DataColumn() {Me.tableCustomer.KeyColumn}, New Global.System.Data.DataColumn() {Me.tableVehicle.KeyColumn}, false)
-        Me.Relations.Add(Me.relationCustomerVehicle)
         Me.relationPriceVehicle = New Global.System.Data.DataRelation("PriceVehicle", New Global.System.Data.DataColumn() {Me.tablePrice.CategoryColumn}, New Global.System.Data.DataColumn() {Me.tableVehicle.CategoryColumn}, false)
         Me.Relations.Add(Me.relationPriceVehicle)
     End Sub
@@ -346,7 +336,7 @@ Partial Public Class new_Maverick_Car_RentalDataSet
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Public Shared Function GetTypedDataSetSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
-        Dim ds As new_Maverick_Car_RentalDataSet = New new_Maverick_Car_RentalDataSet()
+        Dim ds As _new_Maverick_Car_Rental_1_DataSet = New _new_Maverick_Car_Rental_1_DataSet()
         Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
         Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
         Dim any As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
@@ -413,7 +403,7 @@ Partial Public Class new_Maverick_Car_RentalDataSet
     Partial Public Class CustomerDataTable
         Inherits Global.System.Data.TypedTableBase(Of CustomerRow)
         
-        Private columnKey As Global.System.Data.DataColumn
+        Private columnCustomer_Number As Global.System.Data.DataColumn
         
         Private columnOrganization As Global.System.Data.DataColumn
         
@@ -424,8 +414,6 @@ Partial Public Class new_Maverick_Car_RentalDataSet
         Private columnLast_Name As Global.System.Data.DataColumn
         
         Private _columnDL__ As Global.System.Data.DataColumn
-        
-        Private _columnCredit_Card__ As Global.System.Data.DataColumn
         
         Private columnStreet As Global.System.Data.DataColumn
         
@@ -476,9 +464,9 @@ Partial Public Class new_Maverick_Car_RentalDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property KeyColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property Customer_NumberColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnKey
+                Return Me.columnCustomer_Number
             End Get
         End Property
         
@@ -519,14 +507,6 @@ Partial Public Class new_Maverick_Car_RentalDataSet
         Public ReadOnly Property _DL__Column() As Global.System.Data.DataColumn
             Get
                 Return Me._columnDL__
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property _Credit_Card__Column() As Global.System.Data.DataColumn
-            Get
-                Return Me._columnCredit_Card__
             End Get
         End Property
         
@@ -615,9 +595,9 @@ Partial Public Class new_Maverick_Car_RentalDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddCustomerRow(ByVal Organization As String, ByVal First_Name As String, ByVal Middle_Initial As String, ByVal Last_Name As String, ByVal _DL__ As Integer, ByVal _Credit_Card__ As String, ByVal Street As String, ByVal City As String, ByVal State As String, ByVal _Zip_Code As String, ByVal Phone_Number As String, ByVal Age As String) As CustomerRow
+        Public Overloads Function AddCustomerRow(ByVal Organization As String, ByVal First_Name As String, ByVal Middle_Initial As String, ByVal Last_Name As String, ByVal _DL__ As Integer, ByVal Street As String, ByVal City As String, ByVal State As String, ByVal _Zip_Code As String, ByVal Phone_Number As String, ByVal Age As String) As CustomerRow
             Dim rowCustomerRow As CustomerRow = CType(Me.NewRow,CustomerRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, Organization, First_Name, Middle_Initial, Last_Name, _DL__, _Credit_Card__, Street, City, State, _Zip_Code, Phone_Number, Age}
+            Dim columnValuesArray() As Object = New Object() {Nothing, Organization, First_Name, Middle_Initial, Last_Name, _DL__, Street, City, State, _Zip_Code, Phone_Number, Age}
             rowCustomerRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowCustomerRow)
             Return rowCustomerRow
@@ -625,8 +605,8 @@ Partial Public Class new_Maverick_Car_RentalDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function FindByKey(ByVal Key As Integer) As CustomerRow
-            Return CType(Me.Rows.Find(New Object() {Key}),CustomerRow)
+        Public Function FindByCustomer_Number(ByVal Customer_Number As Integer) As CustomerRow
+            Return CType(Me.Rows.Find(New Object() {Customer_Number}),CustomerRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -646,13 +626,12 @@ Partial Public Class new_Maverick_Car_RentalDataSet
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Friend Sub InitVars()
-            Me.columnKey = MyBase.Columns("Key")
+            Me.columnCustomer_Number = MyBase.Columns("Customer Number")
             Me.columnOrganization = MyBase.Columns("Organization")
             Me.columnFirst_Name = MyBase.Columns("First Name")
             Me.columnMiddle_Initial = MyBase.Columns("Middle Initial")
             Me.columnLast_Name = MyBase.Columns("Last Name")
             Me._columnDL__ = MyBase.Columns("DL #")
-            Me._columnCredit_Card__ = MyBase.Columns("Credit Card #")
             Me.columnStreet = MyBase.Columns("Street")
             Me.columnCity = MyBase.Columns("City")
             Me.columnState = MyBase.Columns("State")
@@ -664,8 +643,8 @@ Partial Public Class new_Maverick_Car_RentalDataSet
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitClass()
-            Me.columnKey = New Global.System.Data.DataColumn("Key", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnKey)
+            Me.columnCustomer_Number = New Global.System.Data.DataColumn("Customer Number", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCustomer_Number)
             Me.columnOrganization = New Global.System.Data.DataColumn("Organization", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnOrganization)
             Me.columnFirst_Name = New Global.System.Data.DataColumn("First Name", GetType(String), Nothing, Global.System.Data.MappingType.Element)
@@ -678,10 +657,6 @@ Partial Public Class new_Maverick_Car_RentalDataSet
             Me._columnDL__.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_columnDL__")
             Me._columnDL__.ExtendedProperties.Add("Generator_UserColumnName", "DL #")
             MyBase.Columns.Add(Me._columnDL__)
-            Me._columnCredit_Card__ = New Global.System.Data.DataColumn("Credit Card #", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            Me._columnCredit_Card__.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_columnCredit_Card__")
-            Me._columnCredit_Card__.ExtendedProperties.Add("Generator_UserColumnName", "Credit Card #")
-            MyBase.Columns.Add(Me._columnCredit_Card__)
             Me.columnStreet = New Global.System.Data.DataColumn("Street", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnStreet)
             Me.columnCity = New Global.System.Data.DataColumn("City", GetType(String), Nothing, Global.System.Data.MappingType.Element)
@@ -696,17 +671,16 @@ Partial Public Class new_Maverick_Car_RentalDataSet
             MyBase.Columns.Add(Me.columnPhone_Number)
             Me.columnAge = New Global.System.Data.DataColumn("Age", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnAge)
-            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnKey}, true))
-            Me.columnKey.AutoIncrement = true
-            Me.columnKey.AutoIncrementSeed = -1
-            Me.columnKey.AutoIncrementStep = -1
-            Me.columnKey.AllowDBNull = false
-            Me.columnKey.Unique = true
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnCustomer_Number}, true))
+            Me.columnCustomer_Number.AutoIncrement = true
+            Me.columnCustomer_Number.AutoIncrementSeed = -1
+            Me.columnCustomer_Number.AutoIncrementStep = -1
+            Me.columnCustomer_Number.AllowDBNull = false
+            Me.columnCustomer_Number.Unique = true
             Me.columnOrganization.MaxLength = 255
             Me.columnFirst_Name.MaxLength = 255
             Me.columnMiddle_Initial.MaxLength = 255
             Me.columnLast_Name.MaxLength = 255
-            Me._columnCredit_Card__.MaxLength = 255
             Me.columnStreet.MaxLength = 255
             Me.columnCity.MaxLength = 255
             Me.columnState.MaxLength = 2
@@ -780,7 +754,7 @@ Partial Public Class new_Maverick_Car_RentalDataSet
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As new_Maverick_Car_RentalDataSet = New new_Maverick_Car_RentalDataSet()
+            Dim ds As _new_Maverick_Car_Rental_1_DataSet = New _new_Maverick_Car_Rental_1_DataSet()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -1055,7 +1029,7 @@ Partial Public Class new_Maverick_Car_RentalDataSet
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As new_Maverick_Car_RentalDataSet = New new_Maverick_Car_RentalDataSet()
+            Dim ds As _new_Maverick_Car_Rental_1_DataSet = New _new_Maverick_Car_Rental_1_DataSet()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -1127,9 +1101,9 @@ Partial Public Class new_Maverick_Car_RentalDataSet
         
         Private columnInvoice_Number As Global.System.Data.DataColumn
         
-        Private columnKey As Global.System.Data.DataColumn
+        Private columnVIN As Global.System.Data.DataColumn
         
-        Private columnCategory As Global.System.Data.DataColumn
+        Private columnCustomer_Number As Global.System.Data.DataColumn
         
         Private columnPayment_Method As Global.System.Data.DataColumn
         
@@ -1186,17 +1160,17 @@ Partial Public Class new_Maverick_Car_RentalDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property KeyColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property VINColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnKey
+                Return Me.columnVIN
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property CategoryColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property Customer_NumberColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnCategory
+                Return Me.columnCustomer_Number
             End Get
         End Property
         
@@ -1277,14 +1251,14 @@ Partial Public Class new_Maverick_Car_RentalDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddRentalRow(ByVal parentCustomerRowByCustomerRental As CustomerRow, ByVal parentPriceRowByPriceRental As PriceRow, ByVal Payment_Method As String, ByVal Date_Rented As Date, ByVal Date_Returned As Date, ByVal Paid As Boolean, ByVal Total As Decimal) As RentalRow
+        Public Overloads Function AddRentalRow(ByVal parentVehicleRowByVehicleRental As VehicleRow, ByVal parentCustomerRowByCustomerRental As CustomerRow, ByVal Payment_Method As String, ByVal Date_Rented As Date, ByVal Date_Returned As Date, ByVal Paid As Boolean, ByVal Total As Decimal) As RentalRow
             Dim rowRentalRow As RentalRow = CType(Me.NewRow,RentalRow)
             Dim columnValuesArray() As Object = New Object() {Nothing, Nothing, Nothing, Payment_Method, Date_Rented, Date_Returned, Paid, Total}
-            If (Not (parentCustomerRowByCustomerRental) Is Nothing) Then
-                columnValuesArray(1) = parentCustomerRowByCustomerRental(0)
+            If (Not (parentVehicleRowByVehicleRental) Is Nothing) Then
+                columnValuesArray(1) = parentVehicleRowByVehicleRental(0)
             End If
-            If (Not (parentPriceRowByPriceRental) Is Nothing) Then
-                columnValuesArray(2) = parentPriceRowByPriceRental(0)
+            If (Not (parentCustomerRowByCustomerRental) Is Nothing) Then
+                columnValuesArray(2) = parentCustomerRowByCustomerRental(0)
             End If
             rowRentalRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowRentalRow)
@@ -1315,8 +1289,8 @@ Partial Public Class new_Maverick_Car_RentalDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Friend Sub InitVars()
             Me.columnInvoice_Number = MyBase.Columns("Invoice Number")
-            Me.columnKey = MyBase.Columns("Key")
-            Me.columnCategory = MyBase.Columns("Category")
+            Me.columnVIN = MyBase.Columns("VIN")
+            Me.columnCustomer_Number = MyBase.Columns("Customer Number")
             Me.columnPayment_Method = MyBase.Columns("Payment Method")
             Me.columnDate_Rented = MyBase.Columns("Date Rented")
             Me.columnDate_Returned = MyBase.Columns("Date Returned")
@@ -1329,10 +1303,10 @@ Partial Public Class new_Maverick_Car_RentalDataSet
         Private Sub InitClass()
             Me.columnInvoice_Number = New Global.System.Data.DataColumn("Invoice Number", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnInvoice_Number)
-            Me.columnKey = New Global.System.Data.DataColumn("Key", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnKey)
-            Me.columnCategory = New Global.System.Data.DataColumn("Category", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnCategory)
+            Me.columnVIN = New Global.System.Data.DataColumn("VIN", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnVIN)
+            Me.columnCustomer_Number = New Global.System.Data.DataColumn("Customer Number", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCustomer_Number)
             Me.columnPayment_Method = New Global.System.Data.DataColumn("Payment Method", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnPayment_Method)
             Me.columnDate_Rented = New Global.System.Data.DataColumn("Date Rented", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
@@ -1349,7 +1323,7 @@ Partial Public Class new_Maverick_Car_RentalDataSet
             Me.columnInvoice_Number.AutoIncrementStep = -1
             Me.columnInvoice_Number.AllowDBNull = false
             Me.columnInvoice_Number.Unique = true
-            Me.columnCategory.MaxLength = 255
+            Me.columnVIN.MaxLength = 255
             Me.columnPayment_Method.MaxLength = 255
         End Sub
         
@@ -1418,7 +1392,7 @@ Partial Public Class new_Maverick_Car_RentalDataSet
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As new_Maverick_Car_RentalDataSet = New new_Maverick_Car_RentalDataSet()
+            Dim ds As _new_Maverick_Car_Rental_1_DataSet = New _new_Maverick_Car_Rental_1_DataSet()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -1488,11 +1462,9 @@ Partial Public Class new_Maverick_Car_RentalDataSet
     Partial Public Class VehicleDataTable
         Inherits Global.System.Data.TypedTableBase(Of VehicleRow)
         
-        Private columnKey As Global.System.Data.DataColumn
+        Private columnVIN As Global.System.Data.DataColumn
         
         Private columnCategory As Global.System.Data.DataColumn
-        
-        Private columnVIN As Global.System.Data.DataColumn
         
         Private columnMake As Global.System.Data.DataColumn
         
@@ -1545,9 +1517,9 @@ Partial Public Class new_Maverick_Car_RentalDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property KeyColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property VINColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnKey
+                Return Me.columnVIN
             End Get
         End Property
         
@@ -1556,14 +1528,6 @@ Partial Public Class new_Maverick_Car_RentalDataSet
         Public ReadOnly Property CategoryColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnCategory
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property VINColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnVIN
             End Get
         End Property
         
@@ -1660,9 +1624,9 @@ Partial Public Class new_Maverick_Car_RentalDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddVehicleRow(ByVal parentPriceRowByPriceVehicle As PriceRow, ByVal VIN As String, ByVal Make As String, ByVal Model As String, ByVal Color As String, ByVal Condition As String, ByVal Fuel_Tank As String, ByVal Available As Boolean, ByVal Description As String) As VehicleRow
+        Public Overloads Function AddVehicleRow(ByVal VIN As String, ByVal parentPriceRowByPriceVehicle As PriceRow, ByVal Make As String, ByVal Model As String, ByVal Color As String, ByVal Condition As String, ByVal Fuel_Tank As String, ByVal Available As Boolean, ByVal Description As String) As VehicleRow
             Dim rowVehicleRow As VehicleRow = CType(Me.NewRow,VehicleRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, Nothing, VIN, Make, Model, Color, Condition, Fuel_Tank, Available, Description}
+            Dim columnValuesArray() As Object = New Object() {VIN, Nothing, Make, Model, Color, Condition, Fuel_Tank, Available, Description}
             If (Not (parentPriceRowByPriceVehicle) Is Nothing) Then
                 columnValuesArray(1) = parentPriceRowByPriceVehicle(0)
             End If
@@ -1673,8 +1637,8 @@ Partial Public Class new_Maverick_Car_RentalDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function FindByKeyCategory(ByVal Key As Integer, ByVal Category As String) As VehicleRow
-            Return CType(Me.Rows.Find(New Object() {Key, Category}),VehicleRow)
+        Public Function FindByVIN(ByVal VIN As String) As VehicleRow
+            Return CType(Me.Rows.Find(New Object() {VIN}),VehicleRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1694,9 +1658,8 @@ Partial Public Class new_Maverick_Car_RentalDataSet
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Friend Sub InitVars()
-            Me.columnKey = MyBase.Columns("Key")
-            Me.columnCategory = MyBase.Columns("Category")
             Me.columnVIN = MyBase.Columns("VIN")
+            Me.columnCategory = MyBase.Columns("Category")
             Me.columnMake = MyBase.Columns("Make")
             Me.columnModel = MyBase.Columns("Model")
             Me.columnColor = MyBase.Columns("Color")
@@ -1709,12 +1672,10 @@ Partial Public Class new_Maverick_Car_RentalDataSet
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitClass()
-            Me.columnKey = New Global.System.Data.DataColumn("Key", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnKey)
-            Me.columnCategory = New Global.System.Data.DataColumn("Category", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnCategory)
             Me.columnVIN = New Global.System.Data.DataColumn("VIN", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnVIN)
+            Me.columnCategory = New Global.System.Data.DataColumn("Category", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCategory)
             Me.columnMake = New Global.System.Data.DataColumn("Make", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnMake)
             Me.columnModel = New Global.System.Data.DataColumn("Model", GetType(String), Nothing, Global.System.Data.MappingType.Element)
@@ -1729,14 +1690,11 @@ Partial Public Class new_Maverick_Car_RentalDataSet
             MyBase.Columns.Add(Me.columnAvailable)
             Me.columnDescription = New Global.System.Data.DataColumn("Description", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnDescription)
-            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnKey, Me.columnCategory}, true))
-            Me.columnKey.AutoIncrement = true
-            Me.columnKey.AutoIncrementSeed = -1
-            Me.columnKey.AutoIncrementStep = -1
-            Me.columnKey.AllowDBNull = false
-            Me.columnCategory.AllowDBNull = false
-            Me.columnCategory.MaxLength = 255
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnVIN}, true))
+            Me.columnVIN.AllowDBNull = false
+            Me.columnVIN.Unique = true
             Me.columnVIN.MaxLength = 255
+            Me.columnCategory.MaxLength = 255
             Me.columnMake.MaxLength = 255
             Me.columnModel.MaxLength = 255
             Me.columnColor.MaxLength = 255
@@ -1810,7 +1768,7 @@ Partial Public Class new_Maverick_Car_RentalDataSet
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As new_Maverick_Car_RentalDataSet = New new_Maverick_Car_RentalDataSet()
+            Dim ds As _new_Maverick_Car_Rental_1_DataSet = New _new_Maverick_Car_Rental_1_DataSet()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -1889,12 +1847,12 @@ Partial Public Class new_Maverick_Car_RentalDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property Key() As Integer
+        Public Property Customer_Number() As Integer
             Get
-                Return CType(Me(Me.tableCustomer.KeyColumn),Integer)
+                Return CType(Me(Me.tableCustomer.Customer_NumberColumn),Integer)
             End Get
             Set
-                Me(Me.tableCustomer.KeyColumn) = value
+                Me(Me.tableCustomer.Customer_NumberColumn) = value
             End Set
         End Property
         
@@ -1970,21 +1928,6 @@ Partial Public Class new_Maverick_Car_RentalDataSet
             End Get
             Set
                 Me(Me.tableCustomer._DL__Column) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property _Credit_Card__() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableCustomer._Credit_Card__Column),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Credit Card #' in table 'Customer' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableCustomer._Credit_Card__Column) = value
             End Set
         End Property
         
@@ -2140,18 +2083,6 @@ Partial Public Class new_Maverick_Car_RentalDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function Is_Credit_Card__Null() As Boolean
-            Return Me.IsNull(Me.tableCustomer._Credit_Card__Column)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub Set_Credit_Card__Null()
-            Me(Me.tableCustomer._Credit_Card__Column) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsStreetNull() As Boolean
             Return Me.IsNull(Me.tableCustomer.StreetColumn)
         End Function
@@ -2231,16 +2162,6 @@ Partial Public Class new_Maverick_Car_RentalDataSet
                 Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("CustomerRental")),RentalRow())
             End If
         End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function GetVehicleRows() As VehicleRow()
-            If (Me.Table.ChildRelations("CustomerVehicle") Is Nothing) Then
-                Return New VehicleRow(-1) {}
-            Else
-                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("CustomerVehicle")),VehicleRow())
-            End If
-        End Function
     End Class
     
     '''<summary>
@@ -2298,16 +2219,6 @@ Partial Public Class new_Maverick_Car_RentalDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function GetRentalRows() As RentalRow()
-            If (Me.Table.ChildRelations("PriceRental") Is Nothing) Then
-                Return New RentalRow(-1) {}
-            Else
-                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("PriceRental")),RentalRow())
-            End If
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function GetVehicleRows() As VehicleRow()
             If (Me.Table.ChildRelations("PriceVehicle") Is Nothing) Then
                 Return New VehicleRow(-1) {}
@@ -2345,31 +2256,31 @@ Partial Public Class new_Maverick_Car_RentalDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property Key() As Integer
+        Public Property VIN() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableRental.KeyColumn),Integer)
+                    Return CType(Me(Me.tableRental.VINColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Key' in table 'Rental' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'VIN' in table 'Rental' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableRental.KeyColumn) = value
+                Me(Me.tableRental.VINColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property Category() As String
+        Public Property Customer_Number() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableRental.CategoryColumn),String)
+                    Return CType(Me(Me.tableRental.Customer_NumberColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Category' in table 'Rental' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Customer Number' in table 'Rental' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableRental.CategoryColumn) = value
+                Me(Me.tableRental.Customer_NumberColumn) = value
             End Set
         End Property
         
@@ -2461,17 +2372,6 @@ Partial Public Class new_Maverick_Car_RentalDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property PriceRow() As PriceRow
-            Get
-                Return CType(Me.GetParentRow(Me.Table.ParentRelations("PriceRental")),PriceRow)
-            End Get
-            Set
-                Me.SetParentRow(value, Me.Table.ParentRelations("PriceRental"))
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property VehicleRow() As VehicleRow
             Get
                 Return CType(Me.GetParentRow(Me.Table.ParentRelations("VehicleRental")),VehicleRow)
@@ -2483,26 +2383,26 @@ Partial Public Class new_Maverick_Car_RentalDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsKeyNull() As Boolean
-            Return Me.IsNull(Me.tableRental.KeyColumn)
+        Public Function IsVINNull() As Boolean
+            Return Me.IsNull(Me.tableRental.VINColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetKeyNull()
-            Me(Me.tableRental.KeyColumn) = Global.System.Convert.DBNull
+        Public Sub SetVINNull()
+            Me(Me.tableRental.VINColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsCategoryNull() As Boolean
-            Return Me.IsNull(Me.tableRental.CategoryColumn)
+        Public Function IsCustomer_NumberNull() As Boolean
+            Return Me.IsNull(Me.tableRental.Customer_NumberColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetCategoryNull()
-            Me(Me.tableRental.CategoryColumn) = Global.System.Convert.DBNull
+        Public Sub SetCustomer_NumberNull()
+            Me(Me.tableRental.Customer_NumberColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2583,12 +2483,12 @@ Partial Public Class new_Maverick_Car_RentalDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property Key() As Integer
+        Public Property VIN() As String
             Get
-                Return CType(Me(Me.tableVehicle.KeyColumn),Integer)
+                Return CType(Me(Me.tableVehicle.VINColumn),String)
             End Get
             Set
-                Me(Me.tableVehicle.KeyColumn) = value
+                Me(Me.tableVehicle.VINColumn) = value
             End Set
         End Property
         
@@ -2596,25 +2496,14 @@ Partial Public Class new_Maverick_Car_RentalDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property Category() As String
             Get
-                Return CType(Me(Me.tableVehicle.CategoryColumn),String)
-            End Get
-            Set
-                Me(Me.tableVehicle.CategoryColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property VIN() As String
-            Get
                 Try 
-                    Return CType(Me(Me.tableVehicle.VINColumn),String)
+                    Return CType(Me(Me.tableVehicle.CategoryColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'VIN' in table 'Vehicle' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Category' in table 'Vehicle' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableVehicle.VINColumn) = value
+                Me(Me.tableVehicle.CategoryColumn) = value
             End Set
         End Property
         
@@ -2725,17 +2614,6 @@ Partial Public Class new_Maverick_Car_RentalDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property CustomerRow() As CustomerRow
-            Get
-                Return CType(Me.GetParentRow(Me.Table.ParentRelations("CustomerVehicle")),CustomerRow)
-            End Get
-            Set
-                Me.SetParentRow(value, Me.Table.ParentRelations("CustomerVehicle"))
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property PriceRow() As PriceRow
             Get
                 Return CType(Me.GetParentRow(Me.Table.ParentRelations("PriceVehicle")),PriceRow)
@@ -2747,14 +2625,14 @@ Partial Public Class new_Maverick_Car_RentalDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsVINNull() As Boolean
-            Return Me.IsNull(Me.tableVehicle.VINColumn)
+        Public Function IsCategoryNull() As Boolean
+            Return Me.IsNull(Me.tableVehicle.CategoryColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetVINNull()
-            Me(Me.tableVehicle.VINColumn) = Global.System.Convert.DBNull
+        Public Sub SetCategoryNull()
+            Me(Me.tableVehicle.CategoryColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2997,7 +2875,7 @@ Partial Public Class new_Maverick_Car_RentalDataSet
     End Class
 End Class
 
-Namespace new_Maverick_Car_RentalDataSetTableAdapters
+Namespace _new_Maverick_Car_Rental_1_DataSetTableAdapters
     
     '''<summary>
     '''Represents the connection and commands used to retrieve and save data.
@@ -3126,13 +3004,12 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "Customer"
-            tableMapping.ColumnMappings.Add("Key", "Key")
+            tableMapping.ColumnMappings.Add("Customer Number", "Customer Number")
             tableMapping.ColumnMappings.Add("Organization", "Organization")
             tableMapping.ColumnMappings.Add("First Name", "First Name")
             tableMapping.ColumnMappings.Add("Middle Initial", "Middle Initial")
             tableMapping.ColumnMappings.Add("Last Name", "Last Name")
             tableMapping.ColumnMappings.Add("DL #", "DL #")
-            tableMapping.ColumnMappings.Add("Credit Card #", "Credit Card #")
             tableMapping.ColumnMappings.Add("Street", "Street")
             tableMapping.ColumnMappings.Add("City", "City")
             tableMapping.ColumnMappings.Add("State", "State")
@@ -3142,18 +3019,17 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM `Customer` WHERE ((`Key` = ?) AND ((? = 1 AND `Organization` IS NULL)"& _ 
-                " OR (`Organization` = ?)) AND ((? = 1 AND `First Name` IS NULL) OR (`First Name`"& _ 
-                " = ?)) AND ((? = 1 AND `Middle Initial` IS NULL) OR (`Middle Initial` = ?)) AND "& _ 
-                "((? = 1 AND `Last Name` IS NULL) OR (`Last Name` = ?)) AND ((? = 1 AND `DL #` IS"& _ 
-                " NULL) OR (`DL #` = ?)) AND ((? = 1 AND `Credit Card #` IS NULL) OR (`Credit Car"& _ 
-                "d #` = ?)) AND ((? = 1 AND `Street` IS NULL) OR (`Street` = ?)) AND ((? = 1 AND "& _ 
-                "`City` IS NULL) OR (`City` = ?)) AND ((? = 1 AND `State` IS NULL) OR (`State` = "& _ 
-                "?)) AND ((? = 1 AND `Zip-Code` IS NULL) OR (`Zip-Code` = ?)) AND ((? = 1 AND `Ph"& _ 
-                "one Number` IS NULL) OR (`Phone Number` = ?)) AND ((? = 1 AND `Age` IS NULL) OR "& _ 
-                "(`Age` = ?)))"
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM `Customer` WHERE ((`Customer Number` = ?) AND ((? = 1 AND `Organizati"& _ 
+                "on` IS NULL) OR (`Organization` = ?)) AND ((? = 1 AND `First Name` IS NULL) OR ("& _ 
+                "`First Name` = ?)) AND ((? = 1 AND `Middle Initial` IS NULL) OR (`Middle Initial"& _ 
+                "` = ?)) AND ((? = 1 AND `Last Name` IS NULL) OR (`Last Name` = ?)) AND ((? = 1 A"& _ 
+                "ND `DL #` IS NULL) OR (`DL #` = ?)) AND ((? = 1 AND `Street` IS NULL) OR (`Stree"& _ 
+                "t` = ?)) AND ((? = 1 AND `City` IS NULL) OR (`City` = ?)) AND ((? = 1 AND `State"& _ 
+                "` IS NULL) OR (`State` = ?)) AND ((? = 1 AND `Zip-Code` IS NULL) OR (`Zip-Code` "& _ 
+                "= ?)) AND ((? = 1 AND `Phone Number` IS NULL) OR (`Phone Number` = ?)) AND ((? ="& _ 
+                " 1 AND `Age` IS NULL) OR (`Age` = ?)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Key", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Key", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Customer_Number", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Customer Number", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Organization", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Organization", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Organization", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Organization", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_First_Name", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "First Name", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -3164,8 +3040,6 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Last_Name", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Last Name", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_DL_#", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DL #", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_DL_#", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DL #", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Credit_Card_#", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Credit Card #", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Credit_Card_#", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Credit Card #", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Street", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Street", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Street", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Street", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_City", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "City", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -3181,15 +3055,14 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
             Me._adapter.InsertCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO `Customer` (`Organization`, `First Name`, `Middle Initial`, `Last Nam"& _ 
-                "e`, `DL #`, `Credit Card #`, `Street`, `City`, `State`, `Zip-Code`, `Phone Numbe"& _ 
-                "r`, `Age`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+                "e`, `DL #`, `Street`, `City`, `State`, `Zip-Code`, `Phone Number`, `Age`) VALUES"& _ 
+                " (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Organization", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Organization", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("First_Name", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "First Name", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Middle_Initial", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Middle Initial", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Last_Name", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Last Name", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("DL_#", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DL #", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Credit_Card_#", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Credit Card #", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Street", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Street", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("City", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "City", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("State", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "State", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -3199,31 +3072,29 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
             Me._adapter.UpdateCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE `Customer` SET `Organization` = ?, `First Name` = ?, `Middle Initial` = ?,"& _ 
-                " `Last Name` = ?, `DL #` = ?, `Credit Card #` = ?, `Street` = ?, `City` = ?, `St"& _ 
-                "ate` = ?, `Zip-Code` = ?, `Phone Number` = ?, `Age` = ? WHERE ((`Key` = ?) AND ("& _ 
-                "(? = 1 AND `Organization` IS NULL) OR (`Organization` = ?)) AND ((? = 1 AND `Fir"& _ 
-                "st Name` IS NULL) OR (`First Name` = ?)) AND ((? = 1 AND `Middle Initial` IS NUL"& _ 
-                "L) OR (`Middle Initial` = ?)) AND ((? = 1 AND `Last Name` IS NULL) OR (`Last Nam"& _ 
-                "e` = ?)) AND ((? = 1 AND `DL #` IS NULL) OR (`DL #` = ?)) AND ((? = 1 AND `Credi"& _ 
-                "t Card #` IS NULL) OR (`Credit Card #` = ?)) AND ((? = 1 AND `Street` IS NULL) O"& _ 
-                "R (`Street` = ?)) AND ((? = 1 AND `City` IS NULL) OR (`City` = ?)) AND ((? = 1 A"& _ 
-                "ND `State` IS NULL) OR (`State` = ?)) AND ((? = 1 AND `Zip-Code` IS NULL) OR (`Z"& _ 
-                "ip-Code` = ?)) AND ((? = 1 AND `Phone Number` IS NULL) OR (`Phone Number` = ?)) "& _ 
-                "AND ((? = 1 AND `Age` IS NULL) OR (`Age` = ?)))"
+                " `Last Name` = ?, `DL #` = ?, `Street` = ?, `City` = ?, `State` = ?, `Zip-Code` "& _ 
+                "= ?, `Phone Number` = ?, `Age` = ? WHERE ((`Customer Number` = ?) AND ((? = 1 AN"& _ 
+                "D `Organization` IS NULL) OR (`Organization` = ?)) AND ((? = 1 AND `First Name` "& _ 
+                "IS NULL) OR (`First Name` = ?)) AND ((? = 1 AND `Middle Initial` IS NULL) OR (`M"& _ 
+                "iddle Initial` = ?)) AND ((? = 1 AND `Last Name` IS NULL) OR (`Last Name` = ?)) "& _ 
+                "AND ((? = 1 AND `DL #` IS NULL) OR (`DL #` = ?)) AND ((? = 1 AND `Street` IS NUL"& _ 
+                "L) OR (`Street` = ?)) AND ((? = 1 AND `City` IS NULL) OR (`City` = ?)) AND ((? ="& _ 
+                " 1 AND `State` IS NULL) OR (`State` = ?)) AND ((? = 1 AND `Zip-Code` IS NULL) OR"& _ 
+                " (`Zip-Code` = ?)) AND ((? = 1 AND `Phone Number` IS NULL) OR (`Phone Number` = "& _ 
+                "?)) AND ((? = 1 AND `Age` IS NULL) OR (`Age` = ?)))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Organization", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Organization", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("First_Name", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "First Name", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Middle_Initial", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Middle Initial", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Last_Name", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Last Name", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("DL_#", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DL #", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Credit_Card_#", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Credit Card #", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Street", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Street", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("City", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "City", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("State", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "State", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Zip-Code", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Zip-Code", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Phone_Number", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Phone Number", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Age", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Age", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Key", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Key", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Customer_Number", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Customer Number", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Organization", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Organization", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Organization", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Organization", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_First_Name", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "First Name", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -3234,8 +3105,6 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Last_Name", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Last Name", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_DL_#", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DL #", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_DL_#", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DL #", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Credit_Card_#", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Credit Card #", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Credit_Card_#", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Credit Card #", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Street", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Street", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Street", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Street", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_City", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "City", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -3254,7 +3123,7 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.OleDb.OleDbConnection()
-            Me._connection.ConnectionString = Global.CarRentalAppProject.My.MySettings.Default.new_Maverick_Car_RentalConnectionString
+            Me._connection.ConnectionString = Global.CarRentalAppProject.My.MySettings.Default.new_Maverick_Car_Rental_1_ConnectionString
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -3263,9 +3132,8 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
             Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT [Key], Organization, [First Name], [Middle Initial], [Last Name], [DL #], "& _ 
-                "[Credit Card #], Street, City, State, [Zip-Code], [Phone Number], Age FROM Custo"& _ 
-                "mer"
+            Me._commandCollection(0).CommandText = "SELECT [Customer Number], Organization, [First Name], [Middle Initial], [Last Nam"& _ 
+                "e], [DL #], Street, City, State, [Zip-Code], [Phone Number], Age FROM Customer"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -3273,7 +3141,7 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As new_Maverick_Car_RentalDataSet.CustomerDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As _new_Maverick_Car_Rental_1_DataSet.CustomerDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -3286,9 +3154,9 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As new_Maverick_Car_RentalDataSet.CustomerDataTable
+        Public Overloads Overridable Function GetData() As _new_Maverick_Car_Rental_1_DataSet.CustomerDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As new_Maverick_Car_RentalDataSet.CustomerDataTable = New new_Maverick_Car_RentalDataSet.CustomerDataTable()
+            Dim dataTable As _new_Maverick_Car_Rental_1_DataSet.CustomerDataTable = New _new_Maverick_Car_Rental_1_DataSet.CustomerDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -3296,14 +3164,14 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As new_Maverick_Car_RentalDataSet.CustomerDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As _new_Maverick_Car_Rental_1_DataSet.CustomerDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As new_Maverick_Car_RentalDataSet) As Integer
+        Public Overloads Overridable Function Update(ByVal dataSet As _new_Maverick_Car_Rental_1_DataSet) As Integer
             Return Me.Adapter.Update(dataSet, "Customer")
         End Function
         
@@ -3325,8 +3193,8 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_Key As Integer, ByVal Original_Organization As String, ByVal Original_First_Name As String, ByVal Original_Middle_Initial As String, ByVal Original_Last_Name As String, ByVal _Original_DL__ As Global.System.Nullable(Of Integer), ByVal _Original_Credit_Card__ As String, ByVal Original_Street As String, ByVal Original_City As String, ByVal Original_State As String, ByVal _Original_Zip_Code As String, ByVal Original_Phone_Number As String, ByVal Original_Age As String) As Integer
-            Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_Key,Integer)
+        Public Overloads Overridable Function Delete(ByVal Original_Customer_Number As Integer, ByVal Original_Organization As String, ByVal Original_First_Name As String, ByVal Original_Middle_Initial As String, ByVal Original_Last_Name As String, ByVal _Original_DL__ As Global.System.Nullable(Of Integer), ByVal Original_Street As String, ByVal Original_City As String, ByVal Original_State As String, ByVal _Original_Zip_Code As String, ByVal Original_Phone_Number As String, ByVal Original_Age As String) As Integer
+            Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_Customer_Number,Integer)
             If (Original_Organization Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(2).Value = Global.System.DBNull.Value
@@ -3362,54 +3230,47 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
                 Me.Adapter.DeleteCommand.Parameters(9).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(10).Value = Global.System.DBNull.Value
             End If
-            If (_Original_Credit_Card__ Is Nothing) Then
+            If (Original_Street Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(11).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(12).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(11).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(12).Value = CType(_Original_Credit_Card__,String)
+                Me.Adapter.DeleteCommand.Parameters(12).Value = CType(Original_Street,String)
             End If
-            If (Original_Street Is Nothing) Then
+            If (Original_City Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(13).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(14).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(13).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(14).Value = CType(Original_Street,String)
+                Me.Adapter.DeleteCommand.Parameters(14).Value = CType(Original_City,String)
             End If
-            If (Original_City Is Nothing) Then
+            If (Original_State Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(15).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(16).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(15).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(16).Value = CType(Original_City,String)
+                Me.Adapter.DeleteCommand.Parameters(16).Value = CType(Original_State,String)
             End If
-            If (Original_State Is Nothing) Then
+            If (_Original_Zip_Code Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(17).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(18).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(17).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(18).Value = CType(Original_State,String)
+                Me.Adapter.DeleteCommand.Parameters(18).Value = CType(_Original_Zip_Code,String)
             End If
-            If (_Original_Zip_Code Is Nothing) Then
+            If (Original_Phone_Number Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(19).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(20).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(19).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(20).Value = CType(_Original_Zip_Code,String)
+                Me.Adapter.DeleteCommand.Parameters(20).Value = CType(Original_Phone_Number,String)
             End If
-            If (Original_Phone_Number Is Nothing) Then
+            If (Original_Age Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(21).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(22).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(21).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(22).Value = CType(Original_Phone_Number,String)
-            End If
-            If (Original_Age Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(23).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(24).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.DeleteCommand.Parameters(23).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(24).Value = CType(Original_Age,String)
+                Me.Adapter.DeleteCommand.Parameters(22).Value = CType(Original_Age,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -3430,7 +3291,7 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal Organization As String, ByVal First_Name As String, ByVal Middle_Initial As String, ByVal Last_Name As String, ByVal _DL__ As Global.System.Nullable(Of Integer), ByVal _Credit_Card__ As String, ByVal Street As String, ByVal City As String, ByVal State As String, ByVal _Zip_Code As String, ByVal Phone_Number As String, ByVal Age As String) As Integer
+        Public Overloads Overridable Function Insert(ByVal Organization As String, ByVal First_Name As String, ByVal Middle_Initial As String, ByVal Last_Name As String, ByVal _DL__ As Global.System.Nullable(Of Integer), ByVal Street As String, ByVal City As String, ByVal State As String, ByVal _Zip_Code As String, ByVal Phone_Number As String, ByVal Age As String) As Integer
             If (Organization Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
@@ -3456,40 +3317,35 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
             End If
-            If (_Credit_Card__ Is Nothing) Then
+            If (Street Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(5).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(5).Value = CType(_Credit_Card__,String)
-            End If
-            If (Street Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(6).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(6).Value = CType(Street,String)
+                Me.Adapter.InsertCommand.Parameters(5).Value = CType(Street,String)
             End If
             If (City Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(7).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(6).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(7).Value = CType(City,String)
+                Me.Adapter.InsertCommand.Parameters(6).Value = CType(City,String)
             End If
             If (State Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(8).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(7).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(8).Value = CType(State,String)
+                Me.Adapter.InsertCommand.Parameters(7).Value = CType(State,String)
             End If
             If (_Zip_Code Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(9).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(8).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(9).Value = CType(_Zip_Code,String)
+                Me.Adapter.InsertCommand.Parameters(8).Value = CType(_Zip_Code,String)
             End If
             If (Phone_Number Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(10).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(9).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(10).Value = CType(Phone_Number,String)
+                Me.Adapter.InsertCommand.Parameters(9).Value = CType(Phone_Number,String)
             End If
             If (Age Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(11).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(10).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(11).Value = CType(Age,String)
+                Me.Adapter.InsertCommand.Parameters(10).Value = CType(Age,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -3516,20 +3372,18 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
                     ByVal Middle_Initial As String,  _
                     ByVal Last_Name As String,  _
                     ByVal _DL__ As Global.System.Nullable(Of Integer),  _
-                    ByVal _Credit_Card__ As String,  _
                     ByVal Street As String,  _
                     ByVal City As String,  _
                     ByVal State As String,  _
                     ByVal _Zip_Code As String,  _
                     ByVal Phone_Number As String,  _
                     ByVal Age As String,  _
-                    ByVal Original_Key As Integer,  _
+                    ByVal Original_Customer_Number As Integer,  _
                     ByVal Original_Organization As String,  _
                     ByVal Original_First_Name As String,  _
                     ByVal Original_Middle_Initial As String,  _
                     ByVal Original_Last_Name As String,  _
                     ByVal _Original_DL__ As Global.System.Nullable(Of Integer),  _
-                    ByVal _Original_Credit_Card__ As String,  _
                     ByVal Original_Street As String,  _
                     ByVal Original_City As String,  _
                     ByVal Original_State As String,  _
@@ -3561,125 +3415,113 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
             End If
-            If (_Credit_Card__ Is Nothing) Then
+            If (Street Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(_Credit_Card__,String)
-            End If
-            If (Street Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Street,String)
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Street,String)
             End If
             If (City Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(City,String)
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(City,String)
             End If
             If (State Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(State,String)
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(State,String)
             End If
             If (_Zip_Code Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(_Zip_Code,String)
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(_Zip_Code,String)
             End If
             If (Phone_Number Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Phone_Number,String)
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Phone_Number,String)
             End If
             If (Age Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Age,String)
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Age,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_Key,Integer)
+            Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_Customer_Number,Integer)
             If (Original_Organization Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(13).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(Original_Organization,String)
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(Original_Organization,String)
             End If
             If (Original_First_Name Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(16).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(15).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(Original_First_Name,String)
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(Original_First_Name,String)
             End If
             If (Original_Middle_Initial Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(18).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(17).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(Original_Middle_Initial,String)
+                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(Original_Middle_Initial,String)
             End If
             If (Original_Last_Name Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(20).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(19).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(Original_Last_Name,String)
+                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(Original_Last_Name,String)
             End If
             If (_Original_DL__.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(_Original_DL__.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(_Original_DL__.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(22).Value = Global.System.DBNull.Value
-            End If
-            If (_Original_Credit_Card__ Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(24).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(_Original_Credit_Card__,String)
+                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(21).Value = Global.System.DBNull.Value
             End If
             If (Original_Street Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(26).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(23).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(Original_Street,String)
+                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(Original_Street,String)
             End If
             If (Original_City Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(28).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(25).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(Original_City,String)
+                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(Original_City,String)
             End If
             If (Original_State Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(30).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(27).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(Original_State,String)
+                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(Original_State,String)
             End If
             If (_Original_Zip_Code Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(32).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(29).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(_Original_Zip_Code,String)
+                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(_Original_Zip_Code,String)
             End If
             If (Original_Phone_Number Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(34).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(31).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(34).Value = CType(Original_Phone_Number,String)
+                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(Original_Phone_Number,String)
             End If
             If (Original_Age Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(35).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(36).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(33).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(35).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(36).Value = CType(Original_Age,String)
+                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(Original_Age,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -3857,7 +3699,7 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.OleDb.OleDbConnection()
-            Me._connection.ConnectionString = Global.CarRentalAppProject.My.MySettings.Default.new_Maverick_Car_RentalConnectionString
+            Me._connection.ConnectionString = Global.CarRentalAppProject.My.MySettings.Default.new_Maverick_Car_Rental_1_ConnectionString
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -3874,7 +3716,7 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As new_Maverick_Car_RentalDataSet.PriceDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As _new_Maverick_Car_Rental_1_DataSet.PriceDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -3887,9 +3729,9 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As new_Maverick_Car_RentalDataSet.PriceDataTable
+        Public Overloads Overridable Function GetData() As _new_Maverick_Car_Rental_1_DataSet.PriceDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As new_Maverick_Car_RentalDataSet.PriceDataTable = New new_Maverick_Car_RentalDataSet.PriceDataTable()
+            Dim dataTable As _new_Maverick_Car_Rental_1_DataSet.PriceDataTable = New _new_Maverick_Car_Rental_1_DataSet.PriceDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -3897,14 +3739,14 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As new_Maverick_Car_RentalDataSet.PriceDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As _new_Maverick_Car_Rental_1_DataSet.PriceDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As new_Maverick_Car_RentalDataSet) As Integer
+        Public Overloads Overridable Function Update(ByVal dataSet As _new_Maverick_Car_Rental_1_DataSet) As Integer
             Return Me.Adapter.Update(dataSet, "Price")
         End Function
         
@@ -3928,7 +3770,7 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
         Public Overloads Overridable Function Delete(ByVal Original_Category As String, ByVal Original_Price As Global.System.Nullable(Of Decimal)) As Integer
             If (Original_Category Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(0).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("Original_Category")
             Else
                 Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_Category,String)
             End If
@@ -3960,7 +3802,7 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
         Public Overloads Overridable Function Insert(ByVal Category As String, ByVal Price As Global.System.Nullable(Of Decimal)) As Integer
             If (Category Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("Category")
             Else
                 Me.Adapter.InsertCommand.Parameters(0).Value = CType(Category,String)
             End If
@@ -3990,7 +3832,7 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
         Public Overloads Overridable Function Update(ByVal Category As String, ByVal Price As Global.System.Nullable(Of Decimal), ByVal Original_Category As String, ByVal Original_Price As Global.System.Nullable(Of Decimal)) As Integer
             If (Category Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(0).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("Category")
             Else
                 Me.Adapter.UpdateCommand.Parameters(0).Value = CType(Category,String)
             End If
@@ -4000,7 +3842,7 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
                 Me.Adapter.UpdateCommand.Parameters(1).Value = Global.System.DBNull.Value
             End If
             If (Original_Category Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(2).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("Original_Category")
             Else
                 Me.Adapter.UpdateCommand.Parameters(2).Value = CType(Original_Category,String)
             End If
@@ -4163,8 +4005,8 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "Rental"
             tableMapping.ColumnMappings.Add("Invoice Number", "Invoice Number")
-            tableMapping.ColumnMappings.Add("Key", "Key")
-            tableMapping.ColumnMappings.Add("Category", "Category")
+            tableMapping.ColumnMappings.Add("VIN", "VIN")
+            tableMapping.ColumnMappings.Add("Customer Number", "Customer Number")
             tableMapping.ColumnMappings.Add("Payment Method", "Payment Method")
             tableMapping.ColumnMappings.Add("Date Rented", "Date Rented")
             tableMapping.ColumnMappings.Add("Date Returned", "Date Returned")
@@ -4173,18 +4015,18 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM `Rental` WHERE ((`Invoice Number` = ?) AND ((? = 1 AND `Key` IS NULL)"& _ 
-                " OR (`Key` = ?)) AND ((? = 1 AND `Category` IS NULL) OR (`Category` = ?)) AND (("& _ 
-                "? = 1 AND `Payment Method` IS NULL) OR (`Payment Method` = ?)) AND ((? = 1 AND `"& _ 
-                "Date Rented` IS NULL) OR (`Date Rented` = ?)) AND ((? = 1 AND `Date Returned` IS"& _ 
-                " NULL) OR (`Date Returned` = ?)) AND ((? = 1 AND `Paid` IS NULL) OR (`Paid` = ?)"& _ 
-                ") AND ((? = 1 AND `Total` IS NULL) OR (`Total` = ?)))"
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM `Rental` WHERE ((`Invoice Number` = ?) AND ((? = 1 AND `VIN` IS NULL)"& _ 
+                " OR (`VIN` = ?)) AND ((? = 1 AND `Customer Number` IS NULL) OR (`Customer Number"& _ 
+                "` = ?)) AND ((? = 1 AND `Payment Method` IS NULL) OR (`Payment Method` = ?)) AND"& _ 
+                " ((? = 1 AND `Date Rented` IS NULL) OR (`Date Rented` = ?)) AND ((? = 1 AND `Dat"& _ 
+                "e Returned` IS NULL) OR (`Date Returned` = ?)) AND ((? = 1 AND `Paid` IS NULL) O"& _ 
+                "R (`Paid` = ?)) AND ((? = 1 AND `Total` IS NULL) OR (`Total` = ?)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Invoice_Number", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Invoice Number", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Key", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Key", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Key", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Key", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Category", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Category", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Category", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Category", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_VIN", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "VIN", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_VIN", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "VIN", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Customer_Number", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Customer Number", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Customer_Number", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Customer Number", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Payment_Method", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Payment Method", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Payment_Method", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Payment Method", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Date_Rented", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Date Rented", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -4197,11 +4039,11 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Total", Global.System.Data.OleDb.OleDbType.Currency, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Total", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.InsertCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO `Rental` (`Key`, `Category`, `Payment Method`, `Date Rented`, `Date R"& _ 
-                "eturned`, `Paid`, `Total`) VALUES (?, ?, ?, ?, ?, ?, ?)"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO `Rental` (`VIN`, `Customer Number`, `Payment Method`, `Date Rented`, "& _ 
+                "`Date Returned`, `Paid`, `Total`) VALUES (?, ?, ?, ?, ?, ?, ?)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Key", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Key", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Category", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Category", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("VIN", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "VIN", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Customer_Number", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Customer Number", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Payment_Method", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Payment Method", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Date_Rented", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Date Rented", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Date_Returned", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Date Returned", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -4209,27 +4051,27 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Total", Global.System.Data.OleDb.OleDbType.Currency, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Total", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE `Rental` SET `Key` = ?, `Category` = ?, `Payment Method` = ?, `Date Rented"& _ 
-                "` = ?, `Date Returned` = ?, `Paid` = ?, `Total` = ? WHERE ((`Invoice Number` = ?"& _ 
-                ") AND ((? = 1 AND `Key` IS NULL) OR (`Key` = ?)) AND ((? = 1 AND `Category` IS N"& _ 
-                "ULL) OR (`Category` = ?)) AND ((? = 1 AND `Payment Method` IS NULL) OR (`Payment"& _ 
-                " Method` = ?)) AND ((? = 1 AND `Date Rented` IS NULL) OR (`Date Rented` = ?)) AN"& _ 
-                "D ((? = 1 AND `Date Returned` IS NULL) OR (`Date Returned` = ?)) AND ((? = 1 AND"& _ 
-                " `Paid` IS NULL) OR (`Paid` = ?)) AND ((? = 1 AND `Total` IS NULL) OR (`Total` ="& _ 
-                " ?)))"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE `Rental` SET `VIN` = ?, `Customer Number` = ?, `Payment Method` = ?, `Date"& _ 
+                " Rented` = ?, `Date Returned` = ?, `Paid` = ?, `Total` = ? WHERE ((`Invoice Numb"& _ 
+                "er` = ?) AND ((? = 1 AND `VIN` IS NULL) OR (`VIN` = ?)) AND ((? = 1 AND `Custome"& _ 
+                "r Number` IS NULL) OR (`Customer Number` = ?)) AND ((? = 1 AND `Payment Method` "& _ 
+                "IS NULL) OR (`Payment Method` = ?)) AND ((? = 1 AND `Date Rented` IS NULL) OR (`"& _ 
+                "Date Rented` = ?)) AND ((? = 1 AND `Date Returned` IS NULL) OR (`Date Returned` "& _ 
+                "= ?)) AND ((? = 1 AND `Paid` IS NULL) OR (`Paid` = ?)) AND ((? = 1 AND `Total` I"& _ 
+                "S NULL) OR (`Total` = ?)))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Key", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Key", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Category", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Category", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("VIN", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "VIN", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Customer_Number", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Customer Number", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Payment_Method", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Payment Method", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Date_Rented", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Date Rented", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Date_Returned", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Date Returned", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Paid", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Paid", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Total", Global.System.Data.OleDb.OleDbType.Currency, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Total", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Invoice_Number", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Invoice Number", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Key", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Key", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Key", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Key", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Category", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Category", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Category", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Category", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_VIN", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "VIN", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_VIN", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "VIN", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Customer_Number", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Customer Number", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Customer_Number", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Customer Number", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Payment_Method", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Payment Method", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Payment_Method", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Payment Method", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Date_Rented", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Date Rented", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -4246,7 +4088,7 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.OleDb.OleDbConnection()
-            Me._connection.ConnectionString = Global.CarRentalAppProject.My.MySettings.Default.new_Maverick_Car_RentalConnectionString
+            Me._connection.ConnectionString = Global.CarRentalAppProject.My.MySettings.Default.new_Maverick_Car_Rental_1_ConnectionString
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4255,8 +4097,8 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
             Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT [Invoice Number], [Key], Category, [Payment Method], [Date Rented], [Date "& _ 
-                "Returned], Paid, Total FROM Rental"
+            Me._commandCollection(0).CommandText = "SELECT [Invoice Number], VIN, [Customer Number], [Payment Method], [Date Rented],"& _ 
+                " [Date Returned], Paid, Total FROM Rental"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -4264,7 +4106,7 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As new_Maverick_Car_RentalDataSet.RentalDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As _new_Maverick_Car_Rental_1_DataSet.RentalDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -4277,9 +4119,9 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As new_Maverick_Car_RentalDataSet.RentalDataTable
+        Public Overloads Overridable Function GetData() As _new_Maverick_Car_Rental_1_DataSet.RentalDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As new_Maverick_Car_RentalDataSet.RentalDataTable = New new_Maverick_Car_RentalDataSet.RentalDataTable()
+            Dim dataTable As _new_Maverick_Car_Rental_1_DataSet.RentalDataTable = New _new_Maverick_Car_Rental_1_DataSet.RentalDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -4287,14 +4129,14 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As new_Maverick_Car_RentalDataSet.RentalDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As _new_Maverick_Car_Rental_1_DataSet.RentalDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As new_Maverick_Car_RentalDataSet) As Integer
+        Public Overloads Overridable Function Update(ByVal dataSet As _new_Maverick_Car_Rental_1_DataSet) As Integer
             Return Me.Adapter.Update(dataSet, "Rental")
         End Function
         
@@ -4316,16 +4158,17 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_Invoice_Number As Integer, ByVal Original_Key As Integer, ByVal Original_Category As String, ByVal Original_Payment_Method As String, ByVal Original_Date_Rented As Date, ByVal Original_Date_Returned As Global.System.Nullable(Of Date), ByVal Original_Paid As Boolean, ByVal Original_Total As Decimal) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_Invoice_Number As Integer, ByVal Original_VIN As String, ByVal Original_Customer_Number As Integer, ByVal Original_Payment_Method As String, ByVal Original_Date_Rented As Date, ByVal Original_Date_Returned As Global.System.Nullable(Of Date), ByVal Original_Paid As Boolean, ByVal Original_Total As Decimal) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_Invoice_Number,Integer)
-            Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
-            Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_Key,Integer)
-            If (Original_Category Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_Category")
+            If (Original_VIN Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(2).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_Category,String)
+                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_VIN,String)
             End If
+            Me.Adapter.DeleteCommand.Parameters(3).Value = CType(0,Object)
+            Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_Customer_Number,Integer)
             If (Original_Payment_Method Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_Payment_Method")
             Else
@@ -4364,13 +4207,13 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal Key As Integer, ByVal Category As String, ByVal Payment_Method As String, ByVal Date_Rented As Date, ByVal Date_Returned As Global.System.Nullable(Of Date), ByVal Paid As Boolean, ByVal Total As Decimal) As Integer
-            Me.Adapter.InsertCommand.Parameters(0).Value = CType(Key,Integer)
-            If (Category Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Category")
+        Public Overloads Overridable Function Insert(ByVal VIN As String, ByVal Customer_Number As Integer, ByVal Payment_Method As String, ByVal Date_Rented As Date, ByVal Date_Returned As Global.System.Nullable(Of Date), ByVal Paid As Boolean, ByVal Total As Decimal) As Integer
+            If (VIN Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(1).Value = CType(Category,String)
+                Me.Adapter.InsertCommand.Parameters(0).Value = CType(VIN,String)
             End If
+            Me.Adapter.InsertCommand.Parameters(1).Value = CType(Customer_Number,Integer)
             If (Payment_Method Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Payment_Method")
             Else
@@ -4403,13 +4246,13 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal Key As Integer, ByVal Category As String, ByVal Payment_Method As String, ByVal Date_Rented As Date, ByVal Date_Returned As Global.System.Nullable(Of Date), ByVal Paid As Boolean, ByVal Total As Decimal, ByVal Original_Invoice_Number As Integer, ByVal Original_Key As Integer, ByVal Original_Category As String, ByVal Original_Payment_Method As String, ByVal Original_Date_Rented As Date, ByVal Original_Date_Returned As Global.System.Nullable(Of Date), ByVal Original_Paid As Boolean, ByVal Original_Total As Decimal) As Integer
-            Me.Adapter.UpdateCommand.Parameters(0).Value = CType(Key,Integer)
-            If (Category Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Category")
+        Public Overloads Overridable Function Update(ByVal VIN As String, ByVal Customer_Number As Integer, ByVal Payment_Method As String, ByVal Date_Rented As Date, ByVal Date_Returned As Global.System.Nullable(Of Date), ByVal Paid As Boolean, ByVal Total As Decimal, ByVal Original_Invoice_Number As Integer, ByVal Original_VIN As String, ByVal Original_Customer_Number As Integer, ByVal Original_Payment_Method As String, ByVal Original_Date_Rented As Date, ByVal Original_Date_Returned As Global.System.Nullable(Of Date), ByVal Original_Paid As Boolean, ByVal Original_Total As Decimal) As Integer
+            If (VIN Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(Category,String)
+                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(VIN,String)
             End If
+            Me.Adapter.UpdateCommand.Parameters(1).Value = CType(Customer_Number,Integer)
             If (Payment_Method Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Payment_Method")
             Else
@@ -4424,14 +4267,15 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
             Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Paid,Boolean)
             Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Total,Decimal)
             Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Original_Invoice_Number,Integer)
-            Me.Adapter.UpdateCommand.Parameters(8).Value = CType(0,Object)
-            Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_Key,Integer)
-            If (Original_Category Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_Category")
+            If (Original_VIN Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_Category,String)
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_VIN,String)
             End If
+            Me.Adapter.UpdateCommand.Parameters(10).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_Customer_Number,Integer)
             If (Original_Payment_Method Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_Payment_Method")
             Else
@@ -4594,9 +4438,8 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "Vehicle"
-            tableMapping.ColumnMappings.Add("Key", "Key")
-            tableMapping.ColumnMappings.Add("Category", "Category")
             tableMapping.ColumnMappings.Add("VIN", "VIN")
+            tableMapping.ColumnMappings.Add("Category", "Category")
             tableMapping.ColumnMappings.Add("Make", "Make")
             tableMapping.ColumnMappings.Add("Model", "Model")
             tableMapping.ColumnMappings.Add("Color", "Color")
@@ -4607,18 +4450,17 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM `Vehicle` WHERE ((`Key` = ?) AND (`Category` = ?) AND ((? = 1 AND `VI"& _ 
-                "N` IS NULL) OR (`VIN` = ?)) AND ((? = 1 AND `Make` IS NULL) OR (`Make` = ?)) AND"& _ 
-                " ((? = 1 AND `Model` IS NULL) OR (`Model` = ?)) AND ((? = 1 AND `Color` IS NULL)"& _ 
-                " OR (`Color` = ?)) AND ((? = 1 AND `Condition` IS NULL) OR (`Condition` = ?)) AN"& _ 
-                "D ((? = 1 AND `Fuel Tank` IS NULL) OR (`Fuel Tank` = ?)) AND ((? = 1 AND `Availa"& _ 
-                "ble` IS NULL) OR (`Available` = ?)) AND ((? = 1 AND `Description` IS NULL) OR (`"& _ 
-                "Description` = ?)))"
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM `Vehicle` WHERE ((`VIN` = ?) AND ((? = 1 AND `Category` IS NULL) OR ("& _ 
+                "`Category` = ?)) AND ((? = 1 AND `Make` IS NULL) OR (`Make` = ?)) AND ((? = 1 AN"& _ 
+                "D `Model` IS NULL) OR (`Model` = ?)) AND ((? = 1 AND `Color` IS NULL) OR (`Color"& _ 
+                "` = ?)) AND ((? = 1 AND `Condition` IS NULL) OR (`Condition` = ?)) AND ((? = 1 A"& _ 
+                "ND `Fuel Tank` IS NULL) OR (`Fuel Tank` = ?)) AND ((? = 1 AND `Available` IS NUL"& _ 
+                "L) OR (`Available` = ?)) AND ((? = 1 AND `Description` IS NULL) OR (`Description"& _ 
+                "` = ?)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Key", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Key", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Category", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Category", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_VIN", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "VIN", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_VIN", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "VIN", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Category", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Category", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Category", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Category", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Make", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Make", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Make", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Make", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Model", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Model", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -4635,11 +4477,11 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Description", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Description", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.InsertCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO `Vehicle` (`Category`, `VIN`, `Make`, `Model`, `Color`, `Condition`, "& _ 
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO `Vehicle` (`VIN`, `Category`, `Make`, `Model`, `Color`, `Condition`, "& _ 
                 "`Fuel Tank`, `Available`, `Description`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Category", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Category", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("VIN", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "VIN", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Category", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Category", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Make", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Make", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Model", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Model", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Color", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Color", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -4649,17 +4491,17 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Description", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Description", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE `Vehicle` SET `Category` = ?, `VIN` = ?, `Make` = ?, `Model` = ?, `Color` "& _ 
+            Me._adapter.UpdateCommand.CommandText = "UPDATE `Vehicle` SET `VIN` = ?, `Category` = ?, `Make` = ?, `Model` = ?, `Color` "& _ 
                 "= ?, `Condition` = ?, `Fuel Tank` = ?, `Available` = ?, `Description` = ? WHERE "& _ 
-                "((`Key` = ?) AND (`Category` = ?) AND ((? = 1 AND `VIN` IS NULL) OR (`VIN` = ?))"& _ 
-                " AND ((? = 1 AND `Make` IS NULL) OR (`Make` = ?)) AND ((? = 1 AND `Model` IS NUL"& _ 
-                "L) OR (`Model` = ?)) AND ((? = 1 AND `Color` IS NULL) OR (`Color` = ?)) AND ((? "& _ 
-                "= 1 AND `Condition` IS NULL) OR (`Condition` = ?)) AND ((? = 1 AND `Fuel Tank` I"& _ 
-                "S NULL) OR (`Fuel Tank` = ?)) AND ((? = 1 AND `Available` IS NULL) OR (`Availabl"& _ 
-                "e` = ?)) AND ((? = 1 AND `Description` IS NULL) OR (`Description` = ?)))"
+                "((`VIN` = ?) AND ((? = 1 AND `Category` IS NULL) OR (`Category` = ?)) AND ((? = "& _ 
+                "1 AND `Make` IS NULL) OR (`Make` = ?)) AND ((? = 1 AND `Model` IS NULL) OR (`Mod"& _ 
+                "el` = ?)) AND ((? = 1 AND `Color` IS NULL) OR (`Color` = ?)) AND ((? = 1 AND `Co"& _ 
+                "ndition` IS NULL) OR (`Condition` = ?)) AND ((? = 1 AND `Fuel Tank` IS NULL) OR "& _ 
+                "(`Fuel Tank` = ?)) AND ((? = 1 AND `Available` IS NULL) OR (`Available` = ?)) AN"& _ 
+                "D ((? = 1 AND `Description` IS NULL) OR (`Description` = ?)))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Category", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Category", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("VIN", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "VIN", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Category", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Category", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Make", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Make", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Model", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Model", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Color", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Color", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -4667,10 +4509,9 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Fuel_Tank", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Fuel Tank", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Available", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Available", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Description", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Description", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Key", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Key", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Category", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Category", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_VIN", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "VIN", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_VIN", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "VIN", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Category", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Category", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Category", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Category", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Make", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Make", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Make", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Make", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Model", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Model", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -4691,7 +4532,7 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.OleDb.OleDbConnection()
-            Me._connection.ConnectionString = Global.CarRentalAppProject.My.MySettings.Default.new_Maverick_Car_RentalConnectionString
+            Me._connection.ConnectionString = Global.CarRentalAppProject.My.MySettings.Default.new_Maverick_Car_Rental_1_ConnectionString
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4700,8 +4541,8 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
             Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT [Key], Category, VIN, Make, Model, Color, Condition, [Fuel Tank], Availabl"& _ 
-                "e, Description FROM Vehicle"
+            Me._commandCollection(0).CommandText = "SELECT VIN, Category, Make, Model, Color, Condition, [Fuel Tank], Available, Desc"& _ 
+                "ription FROM Vehicle"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -4709,7 +4550,7 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As new_Maverick_Car_RentalDataSet.VehicleDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As _new_Maverick_Car_Rental_1_DataSet.VehicleDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -4722,9 +4563,9 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As new_Maverick_Car_RentalDataSet.VehicleDataTable
+        Public Overloads Overridable Function GetData() As _new_Maverick_Car_Rental_1_DataSet.VehicleDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As new_Maverick_Car_RentalDataSet.VehicleDataTable = New new_Maverick_Car_RentalDataSet.VehicleDataTable()
+            Dim dataTable As _new_Maverick_Car_Rental_1_DataSet.VehicleDataTable = New _new_Maverick_Car_Rental_1_DataSet.VehicleDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -4732,14 +4573,14 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As new_Maverick_Car_RentalDataSet.VehicleDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As _new_Maverick_Car_Rental_1_DataSet.VehicleDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As new_Maverick_Car_RentalDataSet) As Integer
+        Public Overloads Overridable Function Update(ByVal dataSet As _new_Maverick_Car_Rental_1_DataSet) As Integer
             Return Me.Adapter.Update(dataSet, "Vehicle")
         End Function
         
@@ -4761,63 +4602,61 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_Key As Integer, ByVal Original_Category As String, ByVal Original_VIN As String, ByVal Original_Make As String, ByVal Original_Model As String, ByVal Original_Color As String, ByVal Original_Condition As String, ByVal Original_Fuel_Tank As String, ByVal Original_Available As Boolean, ByVal Original_Description As String) As Integer
-            Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_Key,Integer)
+        Public Overloads Overridable Function Delete(ByVal Original_VIN As String, ByVal Original_Category As String, ByVal Original_Make As String, ByVal Original_Model As String, ByVal Original_Color As String, ByVal Original_Condition As String, ByVal Original_Fuel_Tank As String, ByVal Original_Available As Boolean, ByVal Original_Description As String) As Integer
+            If (Original_VIN Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Original_VIN")
+            Else
+                Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_VIN,String)
+            End If
             If (Original_Category Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_Category")
             Else
-                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(Original_Category,String)
-            End If
-            If (Original_VIN Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(3).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(Original_VIN,String)
+                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_Category,String)
             End If
             If (Original_Make Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(5).Value = Global.System.DBNull.Value
+                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(4).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(Original_Make,String)
+                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_Make,String)
             End If
             If (Original_Model Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(7).Value = Global.System.DBNull.Value
+                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(6).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(Original_Model,String)
+                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_Model,String)
             End If
             If (Original_Color Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(9).Value = Global.System.DBNull.Value
+                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(8).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(Original_Color,String)
+                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(Original_Color,String)
             End If
             If (Original_Condition Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(11).Value = Global.System.DBNull.Value
+                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(10).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(11).Value = CType(Original_Condition,String)
+                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(Original_Condition,String)
             End If
             If (Original_Fuel_Tank Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(12).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(13).Value = Global.System.DBNull.Value
+                Me.Adapter.DeleteCommand.Parameters(11).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(12).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.DeleteCommand.Parameters(12).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(13).Value = CType(Original_Fuel_Tank,String)
+                Me.Adapter.DeleteCommand.Parameters(11).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(12).Value = CType(Original_Fuel_Tank,String)
             End If
-            Me.Adapter.DeleteCommand.Parameters(14).Value = CType(0,Object)
-            Me.Adapter.DeleteCommand.Parameters(15).Value = CType(Original_Available,Boolean)
+            Me.Adapter.DeleteCommand.Parameters(13).Value = CType(0,Object)
+            Me.Adapter.DeleteCommand.Parameters(14).Value = CType(Original_Available,Boolean)
             If (Original_Description Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(16).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(17).Value = Global.System.DBNull.Value
+                Me.Adapter.DeleteCommand.Parameters(15).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(16).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.DeleteCommand.Parameters(16).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(17).Value = CType(Original_Description,String)
+                Me.Adapter.DeleteCommand.Parameters(15).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(16).Value = CType(Original_Description,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -4838,16 +4677,16 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal Category As String, ByVal VIN As String, ByVal Make As String, ByVal Model As String, ByVal Color As String, ByVal Condition As String, ByVal Fuel_Tank As String, ByVal Available As Boolean, ByVal Description As String) As Integer
+        Public Overloads Overridable Function Insert(ByVal VIN As String, ByVal Category As String, ByVal Make As String, ByVal Model As String, ByVal Color As String, ByVal Condition As String, ByVal Fuel_Tank As String, ByVal Available As Boolean, ByVal Description As String) As Integer
+            If (VIN Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("VIN")
+            Else
+                Me.Adapter.InsertCommand.Parameters(0).Value = CType(VIN,String)
+            End If
             If (Category Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Category")
             Else
-                Me.Adapter.InsertCommand.Parameters(0).Value = CType(Category,String)
-            End If
-            If (VIN Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(1).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(1).Value = CType(VIN,String)
+                Me.Adapter.InsertCommand.Parameters(1).Value = CType(Category,String)
             End If
             If (Make Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(2).Value = Global.System.DBNull.Value
@@ -4900,8 +4739,8 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
         Public Overloads Overridable Function Update( _
-                    ByVal Category As String,  _
                     ByVal VIN As String,  _
+                    ByVal Category As String,  _
                     ByVal Make As String,  _
                     ByVal Model As String,  _
                     ByVal Color As String,  _
@@ -4909,9 +4748,8 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
                     ByVal Fuel_Tank As String,  _
                     ByVal Available As Boolean,  _
                     ByVal Description As String,  _
-                    ByVal Original_Key As Integer,  _
-                    ByVal Original_Category As String,  _
                     ByVal Original_VIN As String,  _
+                    ByVal Original_Category As String,  _
                     ByVal Original_Make As String,  _
                     ByVal Original_Model As String,  _
                     ByVal Original_Color As String,  _
@@ -4919,15 +4757,15 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
                     ByVal Original_Fuel_Tank As String,  _
                     ByVal Original_Available As Boolean,  _
                     ByVal Original_Description As String) As Integer
+            If (VIN Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("VIN")
+            Else
+                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(VIN,String)
+            End If
             If (Category Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Category")
             Else
-                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(Category,String)
-            End If
-            If (VIN Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(1).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(VIN,String)
+                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(Category,String)
             End If
             If (Make Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(2).Value = Global.System.DBNull.Value
@@ -4960,62 +4798,60 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Description,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_Key,Integer)
+            If (Original_VIN Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Original_VIN")
+            Else
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_VIN,String)
+            End If
             If (Original_Category Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_Category")
             Else
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_Category,String)
-            End If
-            If (Original_VIN Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_VIN,String)
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_Category,String)
             End If
             If (Original_Make Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(13).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(Original_Make,String)
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(Original_Make,String)
             End If
             If (Original_Model Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(16).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(15).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(Original_Model,String)
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(Original_Model,String)
             End If
             If (Original_Color Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(18).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(17).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(Original_Color,String)
+                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(Original_Color,String)
             End If
             If (Original_Condition Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(20).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(19).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(Original_Condition,String)
+                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(Original_Condition,String)
             End If
             If (Original_Fuel_Tank Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(22).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(21).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(Original_Fuel_Tank,String)
+                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(Original_Fuel_Tank,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(23).Value = CType(0,Object)
-            Me.Adapter.UpdateCommand.Parameters(24).Value = CType(Original_Available,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(22).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(23).Value = CType(Original_Available,Boolean)
             If (Original_Description Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(26).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(25).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(Original_Description,String)
+                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(Original_Description,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -5037,7 +4873,7 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
         Public Overloads Overridable Function Update( _
-                    ByVal VIN As String,  _
+                    ByVal Category As String,  _
                     ByVal Make As String,  _
                     ByVal Model As String,  _
                     ByVal Color As String,  _
@@ -5045,9 +4881,8 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
                     ByVal Fuel_Tank As String,  _
                     ByVal Available As Boolean,  _
                     ByVal Description As String,  _
-                    ByVal Original_Key As Integer,  _
-                    ByVal Original_Category As String,  _
                     ByVal Original_VIN As String,  _
+                    ByVal Original_Category As String,  _
                     ByVal Original_Make As String,  _
                     ByVal Original_Model As String,  _
                     ByVal Original_Color As String,  _
@@ -5055,7 +4890,7 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
                     ByVal Original_Fuel_Tank As String,  _
                     ByVal Original_Available As Boolean,  _
                     ByVal Original_Description As String) As Integer
-            Return Me.Update(Original_Category, VIN, Make, Model, Color, Condition, Fuel_Tank, Available, Description, Original_Key, Original_Category, Original_VIN, Original_Make, Original_Model, Original_Color, Original_Condition, Original_Fuel_Tank, Original_Available, Original_Description)
+            Return Me.Update(Original_VIN, Category, Make, Model, Color, Condition, Fuel_Tank, Available, Description, Original_VIN, Original_Category, Original_Make, Original_Model, Original_Color, Original_Condition, Original_Fuel_Tank, Original_Available, Original_Description)
         End Function
     End Class
     
@@ -5220,23 +5055,23 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Private Function UpdateUpdatedRows(ByVal dataSet As new_Maverick_Car_RentalDataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow), ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateUpdatedRows(ByVal dataSet As _new_Maverick_Car_Rental_1_DataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow), ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
-            If (Not (Me._customerTableAdapter) Is Nothing) Then
-                Dim updatedRows() As Global.System.Data.DataRow = dataSet.Customer.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
-                updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
-                If ((Not (updatedRows) Is Nothing)  _
-                            AndAlso (0 < updatedRows.Length)) Then
-                    result = (result + Me._customerTableAdapter.Update(updatedRows))
-                    allChangedRows.AddRange(updatedRows)
-                End If
-            End If
             If (Not (Me._priceTableAdapter) Is Nothing) Then
                 Dim updatedRows() As Global.System.Data.DataRow = dataSet.Price.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
                 updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
                 If ((Not (updatedRows) Is Nothing)  _
                             AndAlso (0 < updatedRows.Length)) Then
                     result = (result + Me._priceTableAdapter.Update(updatedRows))
+                    allChangedRows.AddRange(updatedRows)
+                End If
+            End If
+            If (Not (Me._customerTableAdapter) Is Nothing) Then
+                Dim updatedRows() As Global.System.Data.DataRow = dataSet.Customer.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
+                updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
+                If ((Not (updatedRows) Is Nothing)  _
+                            AndAlso (0 < updatedRows.Length)) Then
+                    result = (result + Me._customerTableAdapter.Update(updatedRows))
                     allChangedRows.AddRange(updatedRows)
                 End If
             End If
@@ -5266,21 +5101,21 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Private Function UpdateInsertedRows(ByVal dataSet As new_Maverick_Car_RentalDataSet, ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateInsertedRows(ByVal dataSet As _new_Maverick_Car_Rental_1_DataSet, ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
-            If (Not (Me._customerTableAdapter) Is Nothing) Then
-                Dim addedRows() As Global.System.Data.DataRow = dataSet.Customer.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
-                If ((Not (addedRows) Is Nothing)  _
-                            AndAlso (0 < addedRows.Length)) Then
-                    result = (result + Me._customerTableAdapter.Update(addedRows))
-                    allAddedRows.AddRange(addedRows)
-                End If
-            End If
             If (Not (Me._priceTableAdapter) Is Nothing) Then
                 Dim addedRows() As Global.System.Data.DataRow = dataSet.Price.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
                 If ((Not (addedRows) Is Nothing)  _
                             AndAlso (0 < addedRows.Length)) Then
                     result = (result + Me._priceTableAdapter.Update(addedRows))
+                    allAddedRows.AddRange(addedRows)
+                End If
+            End If
+            If (Not (Me._customerTableAdapter) Is Nothing) Then
+                Dim addedRows() As Global.System.Data.DataRow = dataSet.Customer.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
+                If ((Not (addedRows) Is Nothing)  _
+                            AndAlso (0 < addedRows.Length)) Then
+                    result = (result + Me._customerTableAdapter.Update(addedRows))
                     allAddedRows.AddRange(addedRows)
                 End If
             End If
@@ -5308,7 +5143,7 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Private Function UpdateDeletedRows(ByVal dataSet As new_Maverick_Car_RentalDataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateDeletedRows(ByVal dataSet As _new_Maverick_Car_Rental_1_DataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
             If (Not (Me._rentalTableAdapter) Is Nothing) Then
                 Dim deletedRows() As Global.System.Data.DataRow = dataSet.Rental.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
@@ -5326,19 +5161,19 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
                     allChangedRows.AddRange(deletedRows)
                 End If
             End If
-            If (Not (Me._priceTableAdapter) Is Nothing) Then
-                Dim deletedRows() As Global.System.Data.DataRow = dataSet.Price.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
-                If ((Not (deletedRows) Is Nothing)  _
-                            AndAlso (0 < deletedRows.Length)) Then
-                    result = (result + Me._priceTableAdapter.Update(deletedRows))
-                    allChangedRows.AddRange(deletedRows)
-                End If
-            End If
             If (Not (Me._customerTableAdapter) Is Nothing) Then
                 Dim deletedRows() As Global.System.Data.DataRow = dataSet.Customer.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
                 If ((Not (deletedRows) Is Nothing)  _
                             AndAlso (0 < deletedRows.Length)) Then
                     result = (result + Me._customerTableAdapter.Update(deletedRows))
+                    allChangedRows.AddRange(deletedRows)
+                End If
+            End If
+            If (Not (Me._priceTableAdapter) Is Nothing) Then
+                Dim deletedRows() As Global.System.Data.DataRow = dataSet.Price.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
+                If ((Not (deletedRows) Is Nothing)  _
+                            AndAlso (0 < deletedRows.Length)) Then
+                    result = (result + Me._priceTableAdapter.Update(deletedRows))
                     allChangedRows.AddRange(deletedRows)
                 End If
             End If
@@ -5376,7 +5211,7 @@ Namespace new_Maverick_Car_RentalDataSetTableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overridable Function UpdateAll(ByVal dataSet As new_Maverick_Car_RentalDataSet) As Integer
+        Public Overridable Function UpdateAll(ByVal dataSet As _new_Maverick_Car_Rental_1_DataSet) As Integer
             If (dataSet Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("dataSet")
             End If

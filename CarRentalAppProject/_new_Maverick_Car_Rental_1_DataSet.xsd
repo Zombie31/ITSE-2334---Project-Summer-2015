@@ -1,20 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="new_Maverick_Car_RentalDataSet" targetNamespace="http://tempuri.org/new_Maverick_Car_RentalDataSet.xsd" xmlns:mstns="http://tempuri.org/new_Maverick_Car_RentalDataSet.xsd" xmlns="http://tempuri.org/new_Maverick_Car_RentalDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="_new_Maverick_Car_Rental_1_DataSet" targetNamespace="http://tempuri.org/_new_Maverick_Car_Rental_1_DataSet.xsd" xmlns:mstns="http://tempuri.org/_new_Maverick_Car_Rental_1_DataSet.xsd" xmlns="http://tempuri.org/_new_Maverick_Car_Rental_1_DataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="new_Maverick_Car_RentalConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="new_Maverick_Car_RentalConnectionString (MySettings)" PropertyReference="ApplicationSettings.CarRentalAppProject.My.MySettings.GlobalReference.Default.new_Maverick_Car_RentalConnectionString" Provider="System.Data.OleDb" />
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="new_Maverick_Car_Rental_1_ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="new_Maverick_Car_Rental_1_ConnectionString (MySettings)" PropertyReference="ApplicationSettings.CarRentalAppProject.My.MySettings.GlobalReference.Default.new_Maverick_Car_Rental_1_ConnectionString" Provider="System.Data.OleDb" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CustomerTableAdapter" GeneratorDataComponentClassName="CustomerTableAdapter" Name="Customer" UserDataComponentName="CustomerTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="new_Maverick_Car_RentalConnectionString (MySettings)" DbObjectName="Customer" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="new_Maverick_Car_Rental_1_ConnectionString (MySettings)" DbObjectName="Customer" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>DELETE FROM `Customer` WHERE ((`Key` = ?) AND ((? = 1 AND `Organization` IS NULL) OR (`Organization` = ?)) AND ((? = 1 AND `First Name` IS NULL) OR (`First Name` = ?)) AND ((? = 1 AND `Middle Initial` IS NULL) OR (`Middle Initial` = ?)) AND ((? = 1 AND `Last Name` IS NULL) OR (`Last Name` = ?)) AND ((? = 1 AND `DL #` IS NULL) OR (`DL #` = ?)) AND ((? = 1 AND `Credit Card #` IS NULL) OR (`Credit Card #` = ?)) AND ((? = 1 AND `Street` IS NULL) OR (`Street` = ?)) AND ((? = 1 AND `City` IS NULL) OR (`City` = ?)) AND ((? = 1 AND `State` IS NULL) OR (`State` = ?)) AND ((? = 1 AND `Zip-Code` IS NULL) OR (`Zip-Code` = ?)) AND ((? = 1 AND `Phone Number` IS NULL) OR (`Phone Number` = ?)) AND ((? = 1 AND `Age` IS NULL) OR (`Age` = ?)))</CommandText>
+                    <CommandText>DELETE FROM `Customer` WHERE ((`Customer Number` = ?) AND ((? = 1 AND `Organization` IS NULL) OR (`Organization` = ?)) AND ((? = 1 AND `First Name` IS NULL) OR (`First Name` = ?)) AND ((? = 1 AND `Middle Initial` IS NULL) OR (`Middle Initial` = ?)) AND ((? = 1 AND `Last Name` IS NULL) OR (`Last Name` = ?)) AND ((? = 1 AND `DL #` IS NULL) OR (`DL #` = ?)) AND ((? = 1 AND `Street` IS NULL) OR (`Street` = ?)) AND ((? = 1 AND `City` IS NULL) OR (`City` = ?)) AND ((? = 1 AND `State` IS NULL) OR (`State` = ?)) AND ((? = 1 AND `Zip-Code` IS NULL) OR (`Zip-Code` = ?)) AND ((? = 1 AND `Phone Number` IS NULL) OR (`Phone Number` = ?)) AND ((? = 1 AND `Age` IS NULL) OR (`Age` = ?)))</CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Key" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Key" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Customer_Number" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Customer Number" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Organization" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Organization" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Organization" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Organization" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_First_Name" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="First Name" SourceColumnNullMapping="true" SourceVersion="Original" />
@@ -25,8 +25,6 @@
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Last_Name" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Last Name" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_DL_#" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="DL #" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_DL_#" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="DL #" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Credit_Card_#" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Credit Card #" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Credit_Card_#" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Credit Card #" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Street" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Street" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Street" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Street" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_City" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="City" SourceColumnNullMapping="true" SourceVersion="Original" />
@@ -44,14 +42,13 @@
                 </DeleteCommand>
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO `Customer` (`Organization`, `First Name`, `Middle Initial`, `Last Name`, `DL #`, `Credit Card #`, `Street`, `City`, `State`, `Zip-Code`, `Phone Number`, `Age`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)</CommandText>
+                    <CommandText>INSERT INTO `Customer` (`Organization`, `First Name`, `Middle Initial`, `Last Name`, `DL #`, `Street`, `City`, `State`, `Zip-Code`, `Phone Number`, `Age`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Organization" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Organization" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="First_Name" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="First Name" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Middle_Initial" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Middle Initial" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Last_Name" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Last Name" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="DL_#" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="DL #" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Credit_Card_#" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Credit Card #" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Street" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Street" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="City" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="City" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="State" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="State" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -63,27 +60,26 @@
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT [Key], Organization, [First Name], [Middle Initial], [Last Name], [DL #], [Credit Card #], Street, City, State, [Zip-Code], [Phone Number], Age FROM Customer</CommandText>
+                    <CommandText>SELECT [Customer Number], Organization, [First Name], [Middle Initial], [Last Name], [DL #], Street, City, State, [Zip-Code], [Phone Number], Age FROM Customer</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE `Customer` SET `Organization` = ?, `First Name` = ?, `Middle Initial` = ?, `Last Name` = ?, `DL #` = ?, `Credit Card #` = ?, `Street` = ?, `City` = ?, `State` = ?, `Zip-Code` = ?, `Phone Number` = ?, `Age` = ? WHERE ((`Key` = ?) AND ((? = 1 AND `Organization` IS NULL) OR (`Organization` = ?)) AND ((? = 1 AND `First Name` IS NULL) OR (`First Name` = ?)) AND ((? = 1 AND `Middle Initial` IS NULL) OR (`Middle Initial` = ?)) AND ((? = 1 AND `Last Name` IS NULL) OR (`Last Name` = ?)) AND ((? = 1 AND `DL #` IS NULL) OR (`DL #` = ?)) AND ((? = 1 AND `Credit Card #` IS NULL) OR (`Credit Card #` = ?)) AND ((? = 1 AND `Street` IS NULL) OR (`Street` = ?)) AND ((? = 1 AND `City` IS NULL) OR (`City` = ?)) AND ((? = 1 AND `State` IS NULL) OR (`State` = ?)) AND ((? = 1 AND `Zip-Code` IS NULL) OR (`Zip-Code` = ?)) AND ((? = 1 AND `Phone Number` IS NULL) OR (`Phone Number` = ?)) AND ((? = 1 AND `Age` IS NULL) OR (`Age` = ?)))</CommandText>
+                    <CommandText>UPDATE `Customer` SET `Organization` = ?, `First Name` = ?, `Middle Initial` = ?, `Last Name` = ?, `DL #` = ?, `Street` = ?, `City` = ?, `State` = ?, `Zip-Code` = ?, `Phone Number` = ?, `Age` = ? WHERE ((`Customer Number` = ?) AND ((? = 1 AND `Organization` IS NULL) OR (`Organization` = ?)) AND ((? = 1 AND `First Name` IS NULL) OR (`First Name` = ?)) AND ((? = 1 AND `Middle Initial` IS NULL) OR (`Middle Initial` = ?)) AND ((? = 1 AND `Last Name` IS NULL) OR (`Last Name` = ?)) AND ((? = 1 AND `DL #` IS NULL) OR (`DL #` = ?)) AND ((? = 1 AND `Street` IS NULL) OR (`Street` = ?)) AND ((? = 1 AND `City` IS NULL) OR (`City` = ?)) AND ((? = 1 AND `State` IS NULL) OR (`State` = ?)) AND ((? = 1 AND `Zip-Code` IS NULL) OR (`Zip-Code` = ?)) AND ((? = 1 AND `Phone Number` IS NULL) OR (`Phone Number` = ?)) AND ((? = 1 AND `Age` IS NULL) OR (`Age` = ?)))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Organization" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Organization" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="First_Name" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="First Name" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Middle_Initial" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Middle Initial" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Last_Name" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Last Name" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="DL_#" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="DL #" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Credit_Card_#" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Credit Card #" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Street" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Street" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="City" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="City" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="State" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="State" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Zip-Code" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Zip-Code" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Phone_Number" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Phone Number" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Age" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Age" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Key" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Key" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Customer_Number" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Customer Number" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Organization" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Organization" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Organization" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Organization" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_First_Name" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="First Name" SourceColumnNullMapping="true" SourceVersion="Original" />
@@ -94,8 +90,6 @@
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Last_Name" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Last Name" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_DL_#" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="DL #" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_DL_#" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="DL #" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Credit_Card_#" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Credit Card #" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Credit_Card_#" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Credit Card #" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Street" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Street" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Street" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Street" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_City" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="City" SourceColumnNullMapping="true" SourceVersion="Original" />
@@ -114,13 +108,12 @@
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="Key" DataSetColumn="Key" />
+              <Mapping SourceColumn="Customer Number" DataSetColumn="Customer Number" />
               <Mapping SourceColumn="Organization" DataSetColumn="Organization" />
               <Mapping SourceColumn="First Name" DataSetColumn="First Name" />
               <Mapping SourceColumn="Middle Initial" DataSetColumn="Middle Initial" />
               <Mapping SourceColumn="Last Name" DataSetColumn="Last Name" />
               <Mapping SourceColumn="DL #" DataSetColumn="DL #" />
-              <Mapping SourceColumn="Credit Card #" DataSetColumn="Credit Card #" />
               <Mapping SourceColumn="Street" DataSetColumn="Street" />
               <Mapping SourceColumn="City" DataSetColumn="City" />
               <Mapping SourceColumn="State" DataSetColumn="State" />
@@ -132,12 +125,12 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PriceTableAdapter" GeneratorDataComponentClassName="PriceTableAdapter" Name="Price" UserDataComponentName="PriceTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="new_Maverick_Car_RentalConnectionString (MySettings)" DbObjectName="Price" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="new_Maverick_Car_Rental_1_ConnectionString (MySettings)" DbObjectName="Price" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `Price` WHERE ((`Category` = ?) AND ((? = 1 AND `Price` IS NULL) OR (`Price` = ?)))</CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Category" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Category" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Category" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Category" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Price" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="Original_Price" Precision="0" ProviderType="Currency" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
@@ -147,7 +140,7 @@
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>INSERT INTO `Price` (`Category`, `Price`) VALUES (?, ?)</CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Category" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Category" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Category" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Category" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="Price" Precision="0" ProviderType="Currency" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
@@ -162,9 +155,9 @@
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>UPDATE `Price` SET `Category` = ?, `Price` = ? WHERE ((`Category` = ?) AND ((? = 1 AND `Price` IS NULL) OR (`Price` = ?)))</CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Category" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Category" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Category" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Category" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="Price" Precision="0" ProviderType="Currency" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Category" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Category" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Category" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Category" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Price" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="Original_Price" Precision="0" ProviderType="Currency" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
@@ -180,16 +173,16 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="RentalTableAdapter" GeneratorDataComponentClassName="RentalTableAdapter" Name="Rental" UserDataComponentName="RentalTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="new_Maverick_Car_RentalConnectionString (MySettings)" DbObjectName="Rental" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="new_Maverick_Car_Rental_1_ConnectionString (MySettings)" DbObjectName="Rental" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>DELETE FROM `Rental` WHERE ((`Invoice Number` = ?) AND ((? = 1 AND `Key` IS NULL) OR (`Key` = ?)) AND ((? = 1 AND `Category` IS NULL) OR (`Category` = ?)) AND ((? = 1 AND `Payment Method` IS NULL) OR (`Payment Method` = ?)) AND ((? = 1 AND `Date Rented` IS NULL) OR (`Date Rented` = ?)) AND ((? = 1 AND `Date Returned` IS NULL) OR (`Date Returned` = ?)) AND ((? = 1 AND `Paid` IS NULL) OR (`Paid` = ?)) AND ((? = 1 AND `Total` IS NULL) OR (`Total` = ?)))</CommandText>
+                    <CommandText>DELETE FROM `Rental` WHERE ((`Invoice Number` = ?) AND ((? = 1 AND `VIN` IS NULL) OR (`VIN` = ?)) AND ((? = 1 AND `Customer Number` IS NULL) OR (`Customer Number` = ?)) AND ((? = 1 AND `Payment Method` IS NULL) OR (`Payment Method` = ?)) AND ((? = 1 AND `Date Rented` IS NULL) OR (`Date Rented` = ?)) AND ((? = 1 AND `Date Returned` IS NULL) OR (`Date Returned` = ?)) AND ((? = 1 AND `Paid` IS NULL) OR (`Paid` = ?)) AND ((? = 1 AND `Total` IS NULL) OR (`Total` = ?)))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Invoice_Number" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Invoice Number" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Key" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Key" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Key" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Key" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Category" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Category" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Category" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Category" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_VIN" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="VIN" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_VIN" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="VIN" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Customer_Number" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Customer Number" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Customer_Number" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Customer Number" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Payment_Method" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Payment Method" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Payment_Method" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Payment Method" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Date_Rented" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Date Rented" SourceColumnNullMapping="true" SourceVersion="Original" />
@@ -205,10 +198,10 @@
                 </DeleteCommand>
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO `Rental` (`Key`, `Category`, `Payment Method`, `Date Rented`, `Date Returned`, `Paid`, `Total`) VALUES (?, ?, ?, ?, ?, ?, ?)</CommandText>
+                    <CommandText>INSERT INTO `Rental` (`VIN`, `Customer Number`, `Payment Method`, `Date Rented`, `Date Returned`, `Paid`, `Total`) VALUES (?, ?, ?, ?, ?, ?, ?)</CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Key" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Key" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Category" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Category" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="VIN" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="VIN" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Customer_Number" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Customer Number" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Payment_Method" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Payment Method" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="Date_Rented" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Date Rented" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="Date_Returned" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Date Returned" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -219,26 +212,26 @@
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT [Invoice Number], [Key], Category, [Payment Method], [Date Rented], [Date Returned], Paid, Total FROM Rental</CommandText>
+                    <CommandText>SELECT [Invoice Number], VIN, [Customer Number], [Payment Method], [Date Rented], [Date Returned], Paid, Total FROM Rental</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE `Rental` SET `Key` = ?, `Category` = ?, `Payment Method` = ?, `Date Rented` = ?, `Date Returned` = ?, `Paid` = ?, `Total` = ? WHERE ((`Invoice Number` = ?) AND ((? = 1 AND `Key` IS NULL) OR (`Key` = ?)) AND ((? = 1 AND `Category` IS NULL) OR (`Category` = ?)) AND ((? = 1 AND `Payment Method` IS NULL) OR (`Payment Method` = ?)) AND ((? = 1 AND `Date Rented` IS NULL) OR (`Date Rented` = ?)) AND ((? = 1 AND `Date Returned` IS NULL) OR (`Date Returned` = ?)) AND ((? = 1 AND `Paid` IS NULL) OR (`Paid` = ?)) AND ((? = 1 AND `Total` IS NULL) OR (`Total` = ?)))</CommandText>
+                    <CommandText>UPDATE `Rental` SET `VIN` = ?, `Customer Number` = ?, `Payment Method` = ?, `Date Rented` = ?, `Date Returned` = ?, `Paid` = ?, `Total` = ? WHERE ((`Invoice Number` = ?) AND ((? = 1 AND `VIN` IS NULL) OR (`VIN` = ?)) AND ((? = 1 AND `Customer Number` IS NULL) OR (`Customer Number` = ?)) AND ((? = 1 AND `Payment Method` IS NULL) OR (`Payment Method` = ?)) AND ((? = 1 AND `Date Rented` IS NULL) OR (`Date Rented` = ?)) AND ((? = 1 AND `Date Returned` IS NULL) OR (`Date Returned` = ?)) AND ((? = 1 AND `Paid` IS NULL) OR (`Paid` = ?)) AND ((? = 1 AND `Total` IS NULL) OR (`Total` = ?)))</CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Key" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Key" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Category" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Category" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="VIN" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="VIN" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Customer_Number" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Customer Number" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Payment_Method" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Payment Method" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="Date_Rented" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Date Rented" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="Date_Returned" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Date Returned" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="Paid" Precision="0" ProviderType="Boolean" Scale="0" Size="0" SourceColumn="Paid" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="Total" Precision="0" ProviderType="Currency" Scale="0" Size="0" SourceColumn="Total" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Invoice_Number" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Invoice Number" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Key" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Key" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Key" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Key" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Category" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Category" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Category" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Category" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_VIN" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="VIN" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_VIN" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="VIN" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Customer_Number" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Customer Number" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Customer_Number" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Customer Number" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Payment_Method" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Payment Method" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Payment_Method" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Payment Method" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Date_Rented" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Date Rented" SourceColumnNullMapping="true" SourceVersion="Original" />
@@ -256,8 +249,8 @@
             </MainSource>
             <Mappings>
               <Mapping SourceColumn="Invoice Number" DataSetColumn="Invoice Number" />
-              <Mapping SourceColumn="Key" DataSetColumn="Key" />
-              <Mapping SourceColumn="Category" DataSetColumn="Category" />
+              <Mapping SourceColumn="VIN" DataSetColumn="VIN" />
+              <Mapping SourceColumn="Customer Number" DataSetColumn="Customer Number" />
               <Mapping SourceColumn="Payment Method" DataSetColumn="Payment Method" />
               <Mapping SourceColumn="Date Rented" DataSetColumn="Date Rented" />
               <Mapping SourceColumn="Date Returned" DataSetColumn="Date Returned" />
@@ -268,15 +261,14 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VehicleTableAdapter" GeneratorDataComponentClassName="VehicleTableAdapter" Name="Vehicle" UserDataComponentName="VehicleTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="new_Maverick_Car_RentalConnectionString (MySettings)" DbObjectName="Vehicle" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="new_Maverick_Car_Rental_1_ConnectionString (MySettings)" DbObjectName="Vehicle" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>DELETE FROM `Vehicle` WHERE ((`Key` = ?) AND (`Category` = ?) AND ((? = 1 AND `VIN` IS NULL) OR (`VIN` = ?)) AND ((? = 1 AND `Make` IS NULL) OR (`Make` = ?)) AND ((? = 1 AND `Model` IS NULL) OR (`Model` = ?)) AND ((? = 1 AND `Color` IS NULL) OR (`Color` = ?)) AND ((? = 1 AND `Condition` IS NULL) OR (`Condition` = ?)) AND ((? = 1 AND `Fuel Tank` IS NULL) OR (`Fuel Tank` = ?)) AND ((? = 1 AND `Available` IS NULL) OR (`Available` = ?)) AND ((? = 1 AND `Description` IS NULL) OR (`Description` = ?)))</CommandText>
+                    <CommandText>DELETE FROM `Vehicle` WHERE ((`VIN` = ?) AND ((? = 1 AND `Category` IS NULL) OR (`Category` = ?)) AND ((? = 1 AND `Make` IS NULL) OR (`Make` = ?)) AND ((? = 1 AND `Model` IS NULL) OR (`Model` = ?)) AND ((? = 1 AND `Color` IS NULL) OR (`Color` = ?)) AND ((? = 1 AND `Condition` IS NULL) OR (`Condition` = ?)) AND ((? = 1 AND `Fuel Tank` IS NULL) OR (`Fuel Tank` = ?)) AND ((? = 1 AND `Available` IS NULL) OR (`Available` = ?)) AND ((? = 1 AND `Description` IS NULL) OR (`Description` = ?)))</CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Key" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Key" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_VIN" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="VIN" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Category" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Category" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Category" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Category" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_VIN" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="VIN" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_VIN" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="VIN" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Make" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Make" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Make" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Make" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Model" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Model" SourceColumnNullMapping="true" SourceVersion="Original" />
@@ -296,10 +288,10 @@
                 </DeleteCommand>
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO `Vehicle` (`Category`, `VIN`, `Make`, `Model`, `Color`, `Condition`, `Fuel Tank`, `Available`, `Description`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)</CommandText>
+                    <CommandText>INSERT INTO `Vehicle` (`VIN`, `Category`, `Make`, `Model`, `Color`, `Condition`, `Fuel Tank`, `Available`, `Description`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)</CommandText>
                     <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="VIN" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="VIN" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Category" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Category" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="VIN" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="VIN" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Make" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Make" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Model" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Model" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Color" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Color" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -312,16 +304,16 @@
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT [Key], Category, VIN, Make, Model, Color, Condition, [Fuel Tank], Available, Description FROM Vehicle</CommandText>
+                    <CommandText>SELECT VIN, Category, Make, Model, Color, Condition, [Fuel Tank], Available, Description FROM Vehicle</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE `Vehicle` SET `Category` = ?, `VIN` = ?, `Make` = ?, `Model` = ?, `Color` = ?, `Condition` = ?, `Fuel Tank` = ?, `Available` = ?, `Description` = ? WHERE ((`Key` = ?) AND (`Category` = ?) AND ((? = 1 AND `VIN` IS NULL) OR (`VIN` = ?)) AND ((? = 1 AND `Make` IS NULL) OR (`Make` = ?)) AND ((? = 1 AND `Model` IS NULL) OR (`Model` = ?)) AND ((? = 1 AND `Color` IS NULL) OR (`Color` = ?)) AND ((? = 1 AND `Condition` IS NULL) OR (`Condition` = ?)) AND ((? = 1 AND `Fuel Tank` IS NULL) OR (`Fuel Tank` = ?)) AND ((? = 1 AND `Available` IS NULL) OR (`Available` = ?)) AND ((? = 1 AND `Description` IS NULL) OR (`Description` = ?)))</CommandText>
+                    <CommandText>UPDATE `Vehicle` SET `VIN` = ?, `Category` = ?, `Make` = ?, `Model` = ?, `Color` = ?, `Condition` = ?, `Fuel Tank` = ?, `Available` = ?, `Description` = ? WHERE ((`VIN` = ?) AND ((? = 1 AND `Category` IS NULL) OR (`Category` = ?)) AND ((? = 1 AND `Make` IS NULL) OR (`Make` = ?)) AND ((? = 1 AND `Model` IS NULL) OR (`Model` = ?)) AND ((? = 1 AND `Color` IS NULL) OR (`Color` = ?)) AND ((? = 1 AND `Condition` IS NULL) OR (`Condition` = ?)) AND ((? = 1 AND `Fuel Tank` IS NULL) OR (`Fuel Tank` = ?)) AND ((? = 1 AND `Available` IS NULL) OR (`Available` = ?)) AND ((? = 1 AND `Description` IS NULL) OR (`Description` = ?)))</CommandText>
                     <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="VIN" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="VIN" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Category" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Category" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="VIN" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="VIN" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Make" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Make" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Model" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Model" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Color" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Color" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -329,10 +321,9 @@
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Fuel_Tank" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Fuel Tank" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="Available" Precision="0" ProviderType="Boolean" Scale="0" Size="0" SourceColumn="Available" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Description" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Key" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Key" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_VIN" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="VIN" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Category" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Category" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Category" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Category" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_VIN" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="VIN" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_VIN" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="VIN" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Make" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Make" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Make" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Make" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Model" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Model" SourceColumnNullMapping="true" SourceVersion="Original" />
@@ -353,9 +344,8 @@
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="Key" DataSetColumn="Key" />
-              <Mapping SourceColumn="Category" DataSetColumn="Category" />
               <Mapping SourceColumn="VIN" DataSetColumn="VIN" />
+              <Mapping SourceColumn="Category" DataSetColumn="Category" />
               <Mapping SourceColumn="Make" DataSetColumn="Make" />
               <Mapping SourceColumn="Model" DataSetColumn="Model" />
               <Mapping SourceColumn="Color" DataSetColumn="Color" />
@@ -371,13 +361,13 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="new_Maverick_Car_RentalDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="new_Maverick_Car_RentalDataSet" msprop:Generator_UserDSName="new_Maverick_Car_RentalDataSet">
+  <xs:element name="_new_Maverick_Car_Rental_1_DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="_new_Maverick_Car_Rental_1_DataSet" msprop:Generator_UserDSName="_new_Maverick_Car_Rental_1_DataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="Customer" msprop:Generator_TableClassName="CustomerDataTable" msprop:Generator_TableVarName="tableCustomer" msprop:Generator_TablePropName="Customer" msprop:Generator_RowDeletingName="CustomerRowDeleting" msprop:Generator_RowChangingName="CustomerRowChanging" msprop:Generator_RowEvHandlerName="CustomerRowChangeEventHandler" msprop:Generator_RowDeletedName="CustomerRowDeleted" msprop:Generator_UserTableName="Customer" msprop:Generator_RowChangedName="CustomerRowChanged" msprop:Generator_RowEvArgName="CustomerRowChangeEvent" msprop:Generator_RowClassName="CustomerRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Key" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnKey" msprop:Generator_ColumnPropNameInRow="Key" msprop:Generator_ColumnPropNameInTable="KeyColumn" msprop:Generator_UserColumnName="Key" type="xs:int" />
+              <xs:element name="Customer_x0020_Number" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnCustomer_Number" msprop:Generator_ColumnPropNameInRow="Customer_Number" msprop:Generator_ColumnPropNameInTable="Customer_NumberColumn" msprop:Generator_UserColumnName="Customer Number" type="xs:int" />
               <xs:element name="Organization" msprop:Generator_ColumnVarNameInTable="columnOrganization" msprop:Generator_ColumnPropNameInRow="Organization" msprop:Generator_ColumnPropNameInTable="OrganizationColumn" msprop:Generator_UserColumnName="Organization" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -407,13 +397,6 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="DL_x0020__x0023_" msprop:Generator_ColumnVarNameInTable="_columnDL__" msprop:Generator_ColumnPropNameInRow="_DL__" msprop:Generator_ColumnPropNameInTable="_DL__Column" msprop:Generator_UserColumnName="DL #" type="xs:int" minOccurs="0" />
-              <xs:element name="Credit_x0020_Card_x0020__x0023_" msprop:Generator_ColumnVarNameInTable="_columnCredit_Card__" msprop:Generator_ColumnPropNameInRow="_Credit_Card__" msprop:Generator_ColumnPropNameInTable="_Credit_Card__Column" msprop:Generator_UserColumnName="Credit Card #" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
               <xs:element name="Street" msprop:Generator_ColumnVarNameInTable="columnStreet" msprop:Generator_ColumnPropNameInRow="Street" msprop:Generator_ColumnPropNameInTable="StreetColumn" msprop:Generator_UserColumnName="Street" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -477,14 +460,14 @@
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Invoice_x0020_Number" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnInvoice_Number" msprop:Generator_ColumnPropNameInRow="Invoice_Number" msprop:Generator_ColumnPropNameInTable="Invoice_NumberColumn" msprop:Generator_UserColumnName="Invoice Number" type="xs:int" />
-              <xs:element name="Key" msprop:Generator_ColumnVarNameInTable="columnKey" msprop:Generator_ColumnPropNameInRow="Key" msprop:Generator_ColumnPropNameInTable="KeyColumn" msprop:Generator_UserColumnName="Key" type="xs:int" minOccurs="0" />
-              <xs:element name="Category" msprop:Generator_ColumnVarNameInTable="columnCategory" msprop:Generator_ColumnPropNameInRow="Category" msprop:Generator_ColumnPropNameInTable="CategoryColumn" msprop:Generator_UserColumnName="Category" minOccurs="0">
+              <xs:element name="VIN" msprop:Generator_ColumnVarNameInTable="columnVIN" msprop:Generator_ColumnPropNameInRow="VIN" msprop:Generator_ColumnPropNameInTable="VINColumn" msprop:Generator_UserColumnName="VIN" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="Customer_x0020_Number" msprop:Generator_ColumnVarNameInTable="columnCustomer_Number" msprop:Generator_ColumnPropNameInRow="Customer_Number" msprop:Generator_ColumnPropNameInTable="Customer_NumberColumn" msprop:Generator_UserColumnName="Customer Number" type="xs:int" minOccurs="0" />
               <xs:element name="Payment_x0020_Method" msprop:Generator_ColumnVarNameInTable="columnPayment_Method" msprop:Generator_ColumnPropNameInRow="Payment_Method" msprop:Generator_ColumnPropNameInTable="Payment_MethodColumn" msprop:Generator_UserColumnName="Payment Method" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -502,15 +485,14 @@
         <xs:element name="Vehicle" msprop:Generator_TableClassName="VehicleDataTable" msprop:Generator_TableVarName="tableVehicle" msprop:Generator_TablePropName="Vehicle" msprop:Generator_RowDeletingName="VehicleRowDeleting" msprop:Generator_RowChangingName="VehicleRowChanging" msprop:Generator_RowEvHandlerName="VehicleRowChangeEventHandler" msprop:Generator_RowDeletedName="VehicleRowDeleted" msprop:Generator_UserTableName="Vehicle" msprop:Generator_RowChangedName="VehicleRowChanged" msprop:Generator_RowEvArgName="VehicleRowChangeEvent" msprop:Generator_RowClassName="VehicleRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Key" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnKey" msprop:Generator_ColumnPropNameInRow="Key" msprop:Generator_ColumnPropNameInTable="KeyColumn" msprop:Generator_UserColumnName="Key" type="xs:int" />
-              <xs:element name="Category" msprop:Generator_ColumnVarNameInTable="columnCategory" msprop:Generator_ColumnPropNameInRow="Category" msprop:Generator_ColumnPropNameInTable="CategoryColumn" msprop:Generator_UserColumnName="Category">
+              <xs:element name="VIN" msprop:Generator_ColumnVarNameInTable="columnVIN" msprop:Generator_ColumnPropNameInRow="VIN" msprop:Generator_ColumnPropNameInTable="VINColumn" msprop:Generator_UserColumnName="VIN">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="VIN" msprop:Generator_ColumnVarNameInTable="columnVIN" msprop:Generator_ColumnPropNameInRow="VIN" msprop:Generator_ColumnPropNameInTable="VINColumn" msprop:Generator_UserColumnName="VIN" minOccurs="0">
+              <xs:element name="Category" msprop:Generator_ColumnVarNameInTable="columnCategory" msprop:Generator_ColumnPropNameInRow="Category" msprop:Generator_ColumnPropNameInTable="CategoryColumn" msprop:Generator_UserColumnName="Category" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
@@ -567,7 +549,7 @@
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:Customer" />
-      <xs:field xpath="mstns:Key" />
+      <xs:field xpath="mstns:Customer_x0020_Number" />
     </xs:unique>
     <xs:unique name="Price_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:Price" />
@@ -579,16 +561,13 @@
     </xs:unique>
     <xs:unique name="Vehicle_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:Vehicle" />
-      <xs:field xpath="mstns:Key" />
-      <xs:field xpath="mstns:Category" />
+      <xs:field xpath="mstns:VIN" />
     </xs:unique>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="CustomerRental" msdata:parent="Customer" msdata:child="Rental" msdata:parentkey="Key" msdata:childkey="Key" msprop:Generator_UserChildTable="Rental" msprop:Generator_ChildPropName="GetRentalRows" msprop:Generator_UserRelationName="CustomerRental" msprop:Generator_ParentPropName="CustomerRow" msprop:Generator_RelationVarName="relationCustomerRental" msprop:Generator_UserParentTable="Customer" />
-      <msdata:Relationship name="PriceRental" msdata:parent="Price" msdata:child="Rental" msdata:parentkey="Category" msdata:childkey="Category" msprop:Generator_UserChildTable="Rental" msprop:Generator_ChildPropName="GetRentalRows" msprop:Generator_UserRelationName="PriceRental" msprop:Generator_ParentPropName="PriceRow" msprop:Generator_RelationVarName="relationPriceRental" msprop:Generator_UserParentTable="Price" />
-      <msdata:Relationship name="VehicleRental" msdata:parent="Vehicle" msdata:child="Rental" msdata:parentkey="Key" msdata:childkey="Key" msprop:Generator_UserChildTable="Rental" msprop:Generator_ChildPropName="GetRentalRows" msprop:Generator_UserRelationName="VehicleRental" msprop:Generator_RelationVarName="relationVehicleRental" msprop:Generator_UserParentTable="Vehicle" msprop:Generator_ParentPropName="VehicleRow" />
-      <msdata:Relationship name="CustomerVehicle" msdata:parent="Customer" msdata:child="Vehicle" msdata:parentkey="Key" msdata:childkey="Key" msprop:Generator_UserChildTable="Vehicle" msprop:Generator_ChildPropName="GetVehicleRows" msprop:Generator_UserRelationName="CustomerVehicle" msprop:Generator_ParentPropName="CustomerRow" msprop:Generator_RelationVarName="relationCustomerVehicle" msprop:Generator_UserParentTable="Customer" />
+      <msdata:Relationship name="CustomerRental" msdata:parent="Customer" msdata:child="Rental" msdata:parentkey="Customer_x0020_Number" msdata:childkey="Customer_x0020_Number" msprop:Generator_UserChildTable="Rental" msprop:Generator_ChildPropName="GetRentalRows" msprop:Generator_UserRelationName="CustomerRental" msprop:Generator_ParentPropName="CustomerRow" msprop:Generator_RelationVarName="relationCustomerRental" msprop:Generator_UserParentTable="Customer" />
+      <msdata:Relationship name="VehicleRental" msdata:parent="Vehicle" msdata:child="Rental" msdata:parentkey="VIN" msdata:childkey="VIN" msprop:Generator_UserChildTable="Rental" msprop:Generator_ChildPropName="GetRentalRows" msprop:Generator_UserRelationName="VehicleRental" msprop:Generator_RelationVarName="relationVehicleRental" msprop:Generator_UserParentTable="Vehicle" msprop:Generator_ParentPropName="VehicleRow" />
       <msdata:Relationship name="PriceVehicle" msdata:parent="Price" msdata:child="Vehicle" msdata:parentkey="Category" msdata:childkey="Category" msprop:Generator_UserChildTable="Vehicle" msprop:Generator_ChildPropName="GetVehicleRows" msprop:Generator_UserRelationName="PriceVehicle" msprop:Generator_ParentPropName="PriceRow" msprop:Generator_RelationVarName="relationPriceVehicle" msprop:Generator_UserParentTable="Price" />
     </xs:appinfo>
   </xs:annotation>
