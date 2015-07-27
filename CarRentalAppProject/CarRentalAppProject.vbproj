@@ -70,6 +70,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Customer.vb" />
     <Compile Include="HomePage.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +98,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>new_Maverick_Car_RentalDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Price.vb" />
     <Compile Include="UpdateCustomerForm.Designer.vb">
       <DependentUpon>UpdateCustomerForm.vb</DependentUpon>
     </Compile>
@@ -109,6 +111,7 @@
     <Compile Include="UpdateInventoryForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Vehicle.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="HomePage.resx">
