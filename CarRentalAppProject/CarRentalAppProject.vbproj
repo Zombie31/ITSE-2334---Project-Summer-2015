@@ -71,6 +71,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Customer.vb" />
+    <Compile Include="CustomerInfo.Designer.vb">
+      <DependentUpon>CustomerInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerUpdate.Designer.vb">
+      <DependentUpon>CustomerUpdate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerUpdate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinalizeInvoice.Designer.vb">
+      <DependentUpon>FinalizeInvoice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FinalizeInvoice.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="HomePage.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -93,27 +111,60 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Price.vb" />
-    <Compile Include="UpdateCustomerForm.Designer.vb">
-      <DependentUpon>UpdateCustomerForm.vb</DependentUpon>
+    <Compile Include="NewRental.Designer.vb">
+      <DependentUpon>NewRental.vb</DependentUpon>
     </Compile>
-    <Compile Include="UpdateCustomerForm.vb">
+    <Compile Include="NewRental.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UpdateInventoryForm.Designer.vb">
-      <DependentUpon>UpdateInventoryForm.vb</DependentUpon>
+    <Compile Include="NewRentalVehicleList.Designer.vb">
+      <DependentUpon>NewRentalVehicleList.vb</DependentUpon>
     </Compile>
-    <Compile Include="UpdateInventoryForm.vb">
+    <Compile Include="NewRentalVehicleList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="new_Maverick_Car_RentalDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>new_Maverick_Car_RentalDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentInvoice.Designer.vb">
+      <DependentUpon>PaymentInvoice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentInvoice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Price.vb" />
+    <Compile Include="PriceOptions.Designer.vb">
+      <DependentUpon>PriceOptions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PriceOptions.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rental Update.Designer.vb">
+      <DependentUpon>Rental Update.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Rental Update.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RentalCancel.Designer.vb">
+      <DependentUpon>RentalCancel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RentalCancel.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vehicle.vb" />
-    <Compile Include="_new_Maverick_Car_Rental_1_DataSet.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>_new_Maverick_Car_Rental_1_DataSet.xsd</DependentUpon>
+    <Compile Include="Vehicles.Designer.vb">
+      <DependentUpon>Vehicles.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vehicles.vb">
+      <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CustomerInfo.resx">
+      <DependentUpon>CustomerInfo.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.vb</DependentUpon>
     </EmbeddedResource>
@@ -123,11 +174,8 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="UpdateCustomerForm.resx">
-      <DependentUpon>UpdateCustomerForm.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UpdateInventoryForm.resx">
-      <DependentUpon>UpdateInventoryForm.vb</DependentUpon>
+    <EmbeddedResource Include="Rental Update.resx">
+      <DependentUpon>Rental Update.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -141,23 +189,23 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
-    <None Include="_new_Maverick_Car_Rental_1_DataSet.xsc">
-      <DependentUpon>_new_Maverick_Car_Rental_1_DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="_new_Maverick_Car_Rental_1_DataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>_new_Maverick_Car_Rental_1_DataSet.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="_new_Maverick_Car_Rental_1_DataSet.xss">
-      <DependentUpon>_new_Maverick_Car_Rental_1_DataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\Car.jpg" />
-    <Content Include="new Maverick Car Rental%281%29.mdb">
+    <Content Include="new Maverick Car Rental.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="new_Maverick_Car_RentalDataSet.xsc">
+      <DependentUpon>new_Maverick_Car_RentalDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="new_Maverick_Car_RentalDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>new_Maverick_Car_RentalDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="new_Maverick_Car_RentalDataSet.xss">
+      <DependentUpon>new_Maverick_Car_RentalDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Resources\Car.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

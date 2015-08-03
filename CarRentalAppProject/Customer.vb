@@ -6,10 +6,10 @@
 
     Private adapter As New new_Maverick_Car_RentalDataSetTableAdapters.CustomerTableAdapter
     Public Shared Property ErrorMessage As String
-    Public Function AddCustomer(org As String, firstName As String, midName As String, lastName As String, DL As Integer, creditCard As String, street As String, city As String, state As String, zip As String, phone As String, age As String) As Boolean
+    Public Function AddCustomer(org As String, firstName As String, midName As String, lastName As String, DL As Integer, street As String, city As String, state As String, zip As String, phone As String, age As String) As Boolean
         Try
             ErrorMessage = String.Empty
-            adapter.Insert(org, firstName, midName, lastName, DL, creditCard, street, city, state, zip, phone, age)
+            adapter.Insert(org, firstName, midName, lastName, DL, street, city, state, zip, phone, age)
             Return True
         Catch ex As Exception
             ErrorMessage = ex.Message

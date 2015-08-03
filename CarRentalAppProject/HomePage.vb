@@ -9,10 +9,19 @@
     End Sub
 
     Private Sub UpdateCustomerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UpdateCustomerToolStripMenuItem.Click
-        UpdateCustomerForm.Show()
+
     End Sub
 
     Private Sub UpdateInventoryToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UpdateInventoryToolStripMenuItem.Click
-        UpdateInventoryForm.Show()
+
+    End Sub
+
+    Private Sub NewRentalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewRentalToolStripMenuItem.Click
+        frmNewRental.Show()
+
+    End Sub
+
+    Private Sub UpdateRentalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UpdateRentalToolStripMenuItem.Click
+
     End Sub
 End Class

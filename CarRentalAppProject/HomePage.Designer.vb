@@ -94,13 +94,13 @@ Partial Class HomePage
         'NewRentalToolStripMenuItem
         '
         Me.NewRentalToolStripMenuItem.Name = "NewRentalToolStripMenuItem"
-        Me.NewRentalToolStripMenuItem.Size = New System.Drawing.Size(145, 22)
+        Me.NewRentalToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.NewRentalToolStripMenuItem.Text = "New Rental"
         '
         'UpdateRentalToolStripMenuItem
         '
         Me.UpdateRentalToolStripMenuItem.Name = "UpdateRentalToolStripMenuItem"
-        Me.UpdateRentalToolStripMenuItem.Size = New System.Drawing.Size(145, 22)
+        Me.UpdateRentalToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.UpdateRentalToolStripMenuItem.Text = "Search Rental"
         '
         'CustumersToolStripMenuItem
